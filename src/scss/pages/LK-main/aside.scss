@@ -1,0 +1,56 @@
+.aside{
+  background-color: $mainColor;
+  color: $color_1;
+  padding: rem(17) rem(28) rem(30);
+  border-top-right-radius: rem(5);
+  border-bottom-right-radius: rem(5);
+
+
+  &__logo{
+    display: block;
+    @include adaptiveValue(margin-bottom, 75, 40);
+  }
+
+  &-menu{
+    display: grid;
+    grid-gap: rem(24);
+
+    &:last-child{
+      margin-top: rem(40);
+    }
+
+    &__link{
+      transition: .5s;
+      font-size: rem(18);
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color_6;
+
+          .number {
+            transition: .5s;
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+    }
+
+    .bold{
+      font-weight: 700;
+    }
+
+    .regular{
+      font-weight: 400;
+    }
+
+    .number{
+      display: inline-block;
+      background-color: $color_6;
+      padding:0 rem(5);
+      color: $color_1;
+      font-size: rem(14);
+      border-radius: rem(5);
+      margin-left: rem(5);
+    }
+  }
+}

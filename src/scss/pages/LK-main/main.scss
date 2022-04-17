@@ -1,0 +1,7 @@
+.page-grid{
+  display: grid;
+
+  @include mq('tablet-wide') {
+    grid-template-columns: 300px 1fr;
+  }
+}

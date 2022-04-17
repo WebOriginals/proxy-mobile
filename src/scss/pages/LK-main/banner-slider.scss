@@ -1,0 +1,50 @@
+.banner{
+  &-swipe-body{
+    min-width: 0;
+    border-radius: rem(5);
+    overflow: hidden;
+  }
+  &-slide{
+    color: $color_1;
+    min-height: rem(243);
+    max-height: rem(414);
+    padding: rem(30)  rem(20);
+
+    &-ibg{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    h3,p{
+      position: relative;
+      z-index: 2;
+    }
+    h3{
+      margin-bottom: rem(20);
+    }
+  }
+
+  &-pagination{
+    position: absolute;
+    bottom: rem(20) !important;
+    left: rem(30) !important;
+    z-index: 3;
+
+
+    .swiper-pagination-bullet {
+      width: rem(8);
+      height: rem(8);
+      background-color: $color_3;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active{
+      background-color: $color_6;
+      width: rem(23);
+      height: rem(8);
+      border-radius: rem(5);
+    }
+  }
+}

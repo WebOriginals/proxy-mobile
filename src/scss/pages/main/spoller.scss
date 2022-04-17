@@ -1,0 +1,27 @@
+.spoller-sec{
+  padding: 25px 0;
+  @include mq('tablet-wide') {
+    padding: 45px 0;
+  }
+
+  &__title{
+    text-align: center;
+    margin-bottom: 30px;
+    @include mq('tablet-wide') {
+      margin-bottom: 80px;
+    }
+  }
+  .spollers__body{
+
+    ul{
+      display: grid;
+      grid-gap: 15px;
+      padding-left: rem(15);
+
+      li{
+        list-style: disc;
+      }
+    }
+  }
+
+}

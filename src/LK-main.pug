@@ -1,0 +1,19 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body(style="background: #E5E5E5;")
+        .wrapper.page-grid
+            include pug/LK-main/aside
+            main.page
+                include pug/LK-main/header
+                .__container
+                    include pug/LK-main/baneer-settings
+                    include pug/LK-main/slider-type-proxy
+                    include pug/LK-main/banner-blue-btn
+                    include pug/LK-main/text
+                    include pug/LK-main/banner-green
+                    include pug/LK-main/spoller
+                    include pug/LK-main/proxy-column
+        include pug/_basic/_popup
+        include pug/_basic/_js

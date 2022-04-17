@@ -1,0 +1,73 @@
+.header {
+  @include adaptiveValue(padding-top, 30, 15);
+  @include adaptiveValue(padding-bottom, 30, 15);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    gap: rem(30);
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  &__logo {
+    @include maq('tablet') {
+      svg {
+        width: 100px !important;
+      }
+      .white-mobile{
+        fill: $color_1;
+      }
+    }
+  }
+
+  &-link {
+    color: $color_1;
+    font-weight: 700;
+    font-size: rem(18);
+    transition: .5s;
+    @include adaptiveValue(font-size, 14, 14);
+    @include mq('tablet') {
+      margin-left: auto;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-shadow: 0px 5px 8px rgba(150, 150, 150, 1);
+      }
+    }
+
+    &:focus {
+      text-shadow: 0px 5px 8px rgba(150, 150, 150, 1);
+    }
+  }
+  span{
+    color: $color_1;
+  }
+  &__wr {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include maq('tablet') {
+      span{
+        display: none;
+      }
+      flex-direction: column;
+      a{
+        &:nth-child(1){
+          order: 3;
+        }
+        &:nth-child(3){
+          order: 1;
+          width: 150px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.first{
+    @include maq('tablet') {
+        background-image: url("./../img/svg/first-m.svg") !important;
+        background-position: bottom 0  right 45%;
+        background-repeat: no-repeat;
+        padding-bottom: 150px;
+        background-size: 150%;
+    }
+    @include mq('tablet') {
+        background-repeat: no-repeat;
+        background-position: top right -25%;
+        background-size: 80%;
+        width: 100%;
+        height: 100%;
+    }
+    @include mq('desktop') {
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+    @include mq('2K') {
+
+    }
+    @include mq('2.5K'){
+
+    }
+    &__container{
+        height: 100vh;
+        display: grid;
+
+        @include maq('tablet') {
+            transform: translateY(130px);
+        }
+        @include mq('tablet') {
+            align-items: center;
+        }
+    }
+    &__content{
+        @include mq('tablet') {
+            width: 50%;
+        }
+
+        @include maq('tablet') {
+            color: $color_1;
+        }
+    }
+    h1{
+
+        @include adaptiveValue(margin-bottom,27, 16);
+        span{
+            color: $color_7;
+        }
+    }
+    p{
+        span{
+            color: $color_6;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        @include adaptiveValue(font-size,24, 22);
+        @include adaptiveValue(margin-bottom,50, 23);
+
+
+
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li{
+            @include adaptiveValue(font-size, 16, 14);
+            b{
+                @include adaptiveValue(font-size, 18, 16);
+                margin-bottom: 11px;
+                display: inline-block;
+            }
+        }
+    }
+    &__btns{
+        @include adaptiveValue(margin-top,60, 30);
+        display: flex;
+        gap: em(22);
+        flex-wrap: wrap;
+        @include maq('tablet') {
+            button{
+                width: 100%;
+            }
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+}

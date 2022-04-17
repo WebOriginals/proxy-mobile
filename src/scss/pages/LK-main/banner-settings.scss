@@ -1,0 +1,8 @@
+.banner-settings{
+
+  display: grid;
+  grid-gap: rem(32);
+  @include mq('tablet-wide') {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.header-lk {
+  display: grid;
+  grid-gap: rem(40);
+  grid-template-columns: auto auto auto;
+  justify-content: flex-end;
+  padding: rem(30);
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: rem(24);
+
+  &__wallet {
+    font-size: rem(18);
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg{
+          transition: .8s;
+          transform: rotate(720deg);
+        }
+      }
+    }
+  }
+
+  &__settings {
+    position: relative;
+    padding-right: rem(30);
+    cursor: pointer;
+
+    span{
+      font-weight: 700;
+      font-size: rem(18);
+      @include maq('tablet-small') {
+        display: none;
+      }
+    }
+
+    svg{
+      @include mq('tablet-small') {
+        display: none;
+      }
+    }
+    @include mq('tablet-small') {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        background-color: $color_6;
+        height: 2px;
+        width: 10px;
+        transition: transform 0.5s ease 0s;
+      }
+
+      &::before {
+        transform: translate(-75%, -50%) rotate(40deg);
+      }
+
+      &::after {
+        transform: translate(0, -50%) rotate(-40deg);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,151 @@
+.spollet{
+  &__grid{
+    display: grid;
+    grid-gap: rem(20);
+  }
+  &__title{
+    @include adaptiveValue(font-size, 30,22);
+    font-weight: 700;
+    margin-bottom: rem(36);
+  }
+  .spollers__title{
+    padding-top: 0;
+    padding-bottom: 0;
+    .info{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: rem(30);
+      margin-top: rem(11);
+      margin-left: -16px;
+      @include maq('tablet-wide') {
+        gap: rem(15);
+      }
+
+      .info-btn{
+        padding: rem(8) rem(16);
+        border: 1px solid transparent;
+        font-weight: 400;
+        font-size: rem(16);
+        border-radius: rem(30);
+      }
+    }
+    &._spoller-active{
+      .info{
+        margin-top: rem(32);
+        margin-left: 0;
+      }
+      .info-btn{
+        border: 1px solid $color_4;
+        &:first-child{
+          border: 1px solid $color_2;
+          color: $color_2;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+.spollet-proxy__row{
+  padding-top: rem(28);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: rem(28);
+  &:not(:last-child){
+    border-bottom: 1px solid $color_3;
+    padding-bottom: rem(28);
+  }
+}
+.row__title{
+  font-size: rem(20);
+  font-weight: 700;
+}
+.row__date{
+  font-size: rem(14);
+  font-weight: 700;
+
+  &.green{
+    color:$color_8;
+  }
+  &.grey{
+    color:$color_4;
+  }
+
+}
+.row__region{
+  grid-column: span 2;
+  display: flex;
+  gap: rem(10);
+}
+.row__line{
+  grid-column: span 2;
+  display: flex;
+  gap: rem(20);
+  flex-wrap: wrap;
+
+  @include mq('tablet-wide') {
+    align-items: center;
+  }
+  @include maq('tablet-wide') {
+    flex-direction: column;
+
+  }
+  g{
+    color:$color_8;
+  }
+  l{
+    color:$color_4;
+  }
+
+  span{
+    display: flex;
+    gap: rem(5);
+    align-items: center;
+  }
+}
+.row__btns{
+  grid-column: span 2;
+  display: flex;
+  gap: rem(20);
+  align-items: center;
+}
+
+
+.proxy-column{
+
+
+  &__grid{
+    background-color: $color_1;
+    padding: rem(25);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+  }
+  .info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: rem(30);
+    margin-top: rem(11);
+    margin-bottom: rem(32);
+
+
+    .info-btn{
+      padding: rem(8) rem(16);
+      border: 1px solid $color_4;
+      font-weight: 400;
+      font-size: rem(16);
+      border-radius: rem(30);
+
+      &:first-child{
+        border: 1px solid $color_2;
+        color: $color_2;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .select_border-green{
+    margin-left: auto;
+  }
+}
