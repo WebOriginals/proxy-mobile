@@ -22,9 +22,7 @@ export function typeProxy() {
                     slidesPerView: 1,
                 },
 
-                400: {
-                    slidesPerView: 1.8,
-                },
+
 
                 640: {
                     slidesPerView: 2,
@@ -32,7 +30,16 @@ export function typeProxy() {
 
                 1024: {
                     slidesPerView: 3,
-                }
+                },
+
+                1800: {
+                    slidesPerView: 4,
+                },
+
+                2500: {
+                    slidesPerView: 8,
+                },
+
             },
             pagination: {
                 el: ".slider-type-proxy-pagination",

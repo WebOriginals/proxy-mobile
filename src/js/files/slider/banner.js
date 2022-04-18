@@ -28,6 +28,7 @@ export function swiperbanner(){
             // если слайдов мало , скроется навигация, рагиниция
             watchOverflow: true,
             speed: 800,
+
         });
     }
 }

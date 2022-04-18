@@ -12,7 +12,11 @@
     gap: rem(30);
     align-items: center;
     flex-wrap: wrap;
-
+    &.custon{
+      @include mq('desktop-wide') {
+        max-width: 1400px !important;
+      }
+    }
   }
 
   &__logo {

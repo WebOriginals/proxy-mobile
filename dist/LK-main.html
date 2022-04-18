@@ -39,7 +39,7 @@
         <nav class="aside__menu aside-menu"><a class="aside-menu__link bold" href="#">Главная</a><a class="aside-menu__link bold" href="#">Мобильные прокси</a><a class="aside-menu__link bold" href="#">Резедентские прокси</a><a class="aside-menu__link bold" href="#">Серверные прокси</a></nav>
         <nav class="aside__menu aside-menu"><a class="aside-menu__link regular" href="#"> История</a><a class="aside-menu__link regular" href="#"> API</a><a class="aside-menu__link regular" href="#"> Поддержка</a><a class="aside-menu__link regular" href="#"> Инструкции</a><a class="aside-menu__link regular" href="#"> Уведомления <span class="number">14</span></a></nav>
       </aside>
-      <main class="page">
+      <main class="page lk-page">
         <header class="header-lk">
           <div class="menu__icon"><span></span></div>
           <div class="header-lk__wallet"><b>500 000.00</b> ₽
@@ -57,7 +57,7 @@
             </svg>
           </div>
         </header>
-        <div class="__container">
+        <div class="__co">
           <div class="banner-settings">
             <div class="banner-swipe-body">
               <div class="banner-swiper swiper">
@@ -161,41 +161,18 @@
               <div class="slider-type-proxy-pagination"></div>
             </div>
           </div>
-          <div class="banner-blue-btn">
-            <div class="banner-blue-btn__title">Мобильные прокси</div>
-            <button class="button-o">Купить ещё</button>
-          </div>
-          <div class="text">
-            <h5>Безлимитные мобильные прокси</h5>
-            <p>Набор IP адресов мобильных операторов сильно ограничен, а используют их миллионы абонентов. Поэтому системы отслеживания и блокировок IP с особой осторожностью подходят к проверке мобильных прокси. Ведь при блокировке одного IP можно заблокировать сразу тысячи пользователей.</p>
-          </div>
-          <div class="banner-green">
-            <button class="banner-green__close">
-              <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g opacity="0.5">
-                  <path d="M8.50698 7.50027L14.4284 1.57884C14.5454 1.4422 14.6066 1.26643 14.5996 1.08666C14.5927 0.906894 14.5182 0.736366 14.391 0.609156C14.2637 0.481945 14.0932 0.407422 13.9135 0.400478C13.7337 0.393534 13.5579 0.454682 13.4213 0.571701L7.49984 6.49313L1.57841 0.564558C1.44391 0.430055 1.26149 0.354492 1.07127 0.354492C0.881054 0.354492 0.69863 0.430055 0.564127 0.564558C0.429624 0.69906 0.354062 0.881485 0.354062 1.0717C0.354062 1.26192 0.429624 1.44434 0.564127 1.57884L6.4927 7.50027L0.564127 13.4217C0.489354 13.4857 0.428626 13.5645 0.385752 13.6531C0.342878 13.7418 0.318785 13.8383 0.314985 13.9367C0.311186 14.035 0.327761 14.1331 0.363672 14.2248C0.399582 14.3164 0.454052 14.3997 0.523663 14.4693C0.593273 14.5389 0.676521 14.5934 0.768182 14.6293C0.859843 14.6652 0.957937 14.6818 1.05631 14.678C1.15468 14.6742 1.2512 14.6501 1.33982 14.6072C1.42844 14.5643 1.50724 14.5036 1.57127 14.4288L7.49984 8.50741L13.4213 14.4288C13.5579 14.5459 13.7337 14.607 13.9135 14.6001C14.0932 14.5931 14.2637 14.5186 14.391 14.3914C14.5182 14.2642 14.5927 14.0936 14.5996 13.9139C14.6066 13.7341 14.5454 13.5583 14.4284 13.4217L8.50698 7.50027Z" fill="white"></path>
-                </g>
-              </svg>
-            </button>
-            <div class="banner-green__text">
-              <h6>Новинка!</h6>
-              <p>Оцените новую услугу “Название услуги”. Она творит волшебные чудеса за непристойно низкиецены! Теперь вы знаете и можете попробовать ;) Возможно даже чуть дешевле, но только по секрету)</p>
-            </div>
-            <button class="button-g">Попробовать</button>
-          </div>
-          <section class="spollet">
-            <div class="spollet__title">Мои прокси</div>
-            <div class="spollet__grid">
-              <div class="spollers spollet-proxy" data-spollers data-one-spoller>
-                <div class="spollers__title proxy" data-spoller>Мобильные прокси <span></span>
-                  <div class="info">
-                    <div class="info-btn">Все: 3</div>
-                    <div class="info-btn">Активные: 2</div>
-                    <div class="info-btn">На паузе: 1</div>
-                    <div class="info-btn">Завершеенные: 0</div>
+          <section class="spoller-proxy">
+            <div class="spoller-proxy__title">Мои прокси</div>
+            <div class="spoller-proxy__grid">
+              <div class="spoller-proxy__body" data-spollers data-one-spoller>
+                <div class="spoller-proxy__name" data-spoller>Мобильные прокси <span class="spoller-proxy-arrow"></span></div>
+                <div class="spoller-proxy__wrapper">
+                  <div class="spoller-proxy-filter-btns" data-simplebar>
+                    <button class="info-btn">Все: 3</button>
+                    <button class="info-btn">Активные: 2</button>
+                    <button class="info-btn">На паузе: 1</button>
+                    <button class="info-btn">Завершеенные: 0</button>
                   </div>
-                </div>
-                <div class="spollers__body">
                   <div class="spollet-proxy__row">
                     <div class="row__title">MobileProxyVK1</div>
                     <div class="row__date green">35д 12:16:01</div>
@@ -254,16 +231,15 @@
                   </div>
                 </div>
               </div>
-              <div class="spollers spollet-proxy" data-spollers data-one-spoller>
-                <div class="spollers__title proxy" data-spoller>Резидентские прокси <span></span>
-                  <div class="info">
-                    <div class="info-btn">Все: 3</div>
-                    <div class="info-btn">Активные: 2</div>
-                    <div class="info-btn">На паузе: 1</div>
-                    <div class="info-btn">Завершеенные: 0</div>
+              <div class="spoller-proxy__body" data-spollers data-one-spoller>
+                <div class="spoller-proxy__name" data-spoller>Резидентские прокси <span class="spoller-proxy-arrow"></span></div>
+                <div class="spoller-proxy__wrapper">
+                  <div class="spoller-proxy-filter-btns" data-simplebar>
+                    <button class="info-btn">Все: 3</button>
+                    <button class="info-btn">Активные: 2</button>
+                    <button class="info-btn">На паузе: 1</button>
+                    <button class="info-btn">Завершеенные: 0</button>
                   </div>
-                </div>
-                <div class="spollers__body">
                   <div class="spollet-proxy__row">
                     <div class="row__title">MobileProxyVK1</div>
                     <div class="row__date green">35д 12:16:01</div>
@@ -322,16 +298,15 @@
                   </div>
                 </div>
               </div>
-              <div class="spollers spollet-proxy" data-spollers data-one-spoller>
-                <div class="spollers__title proxy" data-spoller>Серверные прокси <span></span>
-                  <div class="info">
-                    <div class="info-btn">Все: 3</div>
-                    <div class="info-btn">Активные: 2</div>
-                    <div class="info-btn">На паузе: 1</div>
-                    <div class="info-btn">Завершеенные: 0</div>
+              <div class="spoller-proxy__body" data-spollers data-one-spoller>
+                <div class="spoller-proxy__name" data-spoller>Серверные прокси <span class="spoller-proxy-arrow"></span></div>
+                <div class="spoller-proxy__wrapper">
+                  <div class="spoller-proxy-filter-btns" data-simplebar>
+                    <button class="info-btn">Все: 3</button>
+                    <button class="info-btn">Активные: 2</button>
+                    <button class="info-btn">На паузе: 1</button>
+                    <button class="info-btn">Завершеенные: 0</button>
                   </div>
-                </div>
-                <div class="spollers__body">
                   <div class="spollet-proxy__row">
                     <div class="row__title">MobileProxyVK1</div>
                     <div class="row__date green">35д 12:16:01</div>
@@ -392,76 +367,6 @@
               </div>
             </div>
           </section>
-          <div class="proxy-column">
-            <div class="info">
-              <div class="info-btn">Все: 3</div>
-              <div class="info-btn">Активные: 2</div>
-              <div class="info-btn">На паузе: 1</div>
-              <div class="info-btn">Завершеенные: 0</div>
-              <select class="border-green">
-                <option>По возростанию</option>
-                <option selected>По убыванию</option>
-              </select>
-            </div>
-            <div class="proxy-column__grid">
-              <div class="spollet-proxy__row">
-                <div class="row__title">MobileProxyVK1</div>
-                <div class="row__date green">35д 12:16:01</div>
-                <div class="row__region">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 9 6" width="28" height="18">
-                    <rect fill="#fff" width="9" height="3"></rect>
-                    <rect fill="#d52b1e" y="3" width="9" height="3"></rect>
-                    <rect fill="#0039a6" y="2" width="9" height="2"></rect>
-                  </svg><span>RU/Уфа/Tele2</span>
-                </div>
-                <div class="row__line"><span><b>IP: </b> 5.61.52.223
-                    <button>
-                      <svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.2688 8.72812L12.6469 5.10625C12.4687 4.86875 12.1719 4.75 11.875 4.75H7.125C6.47188 4.75 5.9375 5.28438 5.9375 5.9375V16.625C5.9375 17.2781 6.47188 17.8125 7.125 17.8125H15.4375C16.0906 17.8125 16.625 17.2781 16.625 16.625V9.55938C16.625 9.2625 16.5062 8.96562 16.2688 8.72812ZM11.875 5.9375L15.3781 9.5H11.875V5.9375ZM7.125 16.625V5.9375H10.6875V9.5C10.6875 10.1531 11.2219 10.6875 11.875 10.6875H15.4375V16.625H7.125Z" fill="#C4C4C4"></path>
-                        <path d="M3.5625 10.6875H2.375V2.375C2.375 1.72188 2.90938 1.1875 3.5625 1.1875H11.875V2.375H3.5625V10.6875Z" fill="#C4C4C4"></path>
-                      </svg>
-                    </button></span><span><b>Port:  </b> 10264
-                    <button>
-                      <svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.2688 8.72812L12.6469 5.10625C12.4687 4.86875 12.1719 4.75 11.875 4.75H7.125C6.47188 4.75 5.9375 5.28438 5.9375 5.9375V16.625C5.9375 17.2781 6.47188 17.8125 7.125 17.8125H15.4375C16.0906 17.8125 16.625 17.2781 16.625 16.625V9.55938C16.625 9.2625 16.5062 8.96562 16.2688 8.72812ZM11.875 5.9375L15.3781 9.5H11.875V5.9375ZM7.125 16.625V5.9375H10.6875V9.5C10.6875 10.1531 11.2219 10.6875 11.875 10.6875H15.4375V16.625H7.125Z" fill="#C4C4C4"></path>
-                        <path d="M3.5625 10.6875H2.375V2.375C2.375 1.72188 2.90938 1.1875 3.5625 1.1875H11.875V2.375H3.5625V10.6875Z" fill="#C4C4C4"></path>
-                      </svg>
-                    </button></span><span><b>Port:  </b> <g>Активна</g></span><span><b>Date of purchase:  </b> 16/04/22 16:44:15</span></div>
-                <div class="row__btns">
-                  <div class="button-o">Перезагрузка</div>
-                  <div class="button-w-w">Пауза</div>
-                </div>
-              </div>
-              <div class="spollet-proxy__row">
-                <div class="row__title">MobileProxyVK1</div>
-                <div class="row__date green">35д 12:16:01</div>
-                <div class="row__region">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 9 6" width="28" height="18">
-                    <rect fill="#fff" width="9" height="3"></rect>
-                    <rect fill="#d52b1e" y="3" width="9" height="3"></rect>
-                    <rect fill="#0039a6" y="2" width="9" height="2"></rect>
-                  </svg><span>RU/Уфа/Tele2</span>
-                </div>
-                <div class="row__line"><span><b>IP: </b> 5.61.52.223
-                    <button>
-                      <svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.2688 8.72812L12.6469 5.10625C12.4687 4.86875 12.1719 4.75 11.875 4.75H7.125C6.47188 4.75 5.9375 5.28438 5.9375 5.9375V16.625C5.9375 17.2781 6.47188 17.8125 7.125 17.8125H15.4375C16.0906 17.8125 16.625 17.2781 16.625 16.625V9.55938C16.625 9.2625 16.5062 8.96562 16.2688 8.72812ZM11.875 5.9375L15.3781 9.5H11.875V5.9375ZM7.125 16.625V5.9375H10.6875V9.5C10.6875 10.1531 11.2219 10.6875 11.875 10.6875H15.4375V16.625H7.125Z" fill="#C4C4C4"></path>
-                        <path d="M3.5625 10.6875H2.375V2.375C2.375 1.72188 2.90938 1.1875 3.5625 1.1875H11.875V2.375H3.5625V10.6875Z" fill="#C4C4C4"></path>
-                      </svg>
-                    </button></span><span><b>Port:  </b> 10264
-                    <button>
-                      <svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.2688 8.72812L12.6469 5.10625C12.4687 4.86875 12.1719 4.75 11.875 4.75H7.125C6.47188 4.75 5.9375 5.28438 5.9375 5.9375V16.625C5.9375 17.2781 6.47188 17.8125 7.125 17.8125H15.4375C16.0906 17.8125 16.625 17.2781 16.625 16.625V9.55938C16.625 9.2625 16.5062 8.96562 16.2688 8.72812ZM11.875 5.9375L15.3781 9.5H11.875V5.9375ZM7.125 16.625V5.9375H10.6875V9.5C10.6875 10.1531 11.2219 10.6875 11.875 10.6875H15.4375V16.625H7.125Z" fill="#C4C4C4"></path>
-                        <path d="M3.5625 10.6875H2.375V2.375C2.375 1.72188 2.90938 1.1875 3.5625 1.1875H11.875V2.375H3.5625V10.6875Z" fill="#C4C4C4"></path>
-                      </svg>
-                    </button></span><span><b>Port:  </b> <l>Активна</l></span><span><b>Date of purchase:  </b> 16/04/22 16:44:15</span></div>
-                <div class="row__btns">
-                  <div class="button-o">Перезагрузка</div>
-                  <div class="button-w-w">Пауза</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </div>

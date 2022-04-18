@@ -31,7 +31,7 @@ import * as flsFunctions from "./files/functions.js";
 /* 5Добавление loaded для HTML после полной загрузки страницы */
 //flsFunctions.addLoadedClass();
 /* 6Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+ flsFunctions.menuInit();
 /* 7Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 

@@ -4,4 +4,10 @@
   @include mq('tablet-wide') {
     grid-template-columns: 300px 1fr;
   }
+  .__co{
+    padding: 0 rem(15);
+    @include mq('tablet-wide') {
+      padding: 0 rem(32);
+    }
+  }
 }

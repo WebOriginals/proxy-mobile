@@ -1,11 +1,13 @@
 .proxy-column
-    .info
-        .info-btn Все: 3
-        .info-btn Активные: 2
-        .info-btn На паузе: 1
-        .info-btn Завершеенные: 0
+    .proxy-column__top
+        .info(data-simplebar)
+            .info-btn Все: 3
+            .info-btn Активные: 2
+            .info-btn На паузе: 1
+            .info-btn Завершеенные: 0
         select.border-green
             option По возростанию
+            option По рейтингу
             option(selected) По убыванию
 
 
