@@ -1,10 +1,10 @@
 // Импорт функционала ====================================================================================================================================================================================================================================================================================================
 // Вспомогательные функции.
-import { isMobile } from "../functions.js";
+import {isMobile} from "../functions.js";
 // Импорт класса наблюдателя.
-import { ScrollWatcher } from "../../libs/watcher.js";
+import {ScrollWatcher} from "../../libs/watcher.js";
 // Модуль прокрутки к блоку (раскомментировать при использовании).
-import { gotoBlock } from "./gotoblock.js";
+import {gotoBlock} from "./gotoblock.js";
 // Переменная контроля добавления события window scroll.
 let addWindowScrollEvent = false;
 //====================================================================================================================================================================================================================================================================================================
@@ -16,6 +16,7 @@ export function scrollWatcher(logging = false) {
 		logging: logging
 	});
 }
+
 // Плавная навигация по странице
 export function pageNavigation() {
 	// data-goto - указать ID блока
@@ -25,6 +26,7 @@ export function pageNavigation() {
 	document.addEventListener("click", pageNavigationAction);
 	// Если подключен scrollWatcher, подсвечиваем текущий пукт меню
 	document.addEventListener("watcherCallback", pageNavigationAction);
+
 	// Основная функция
 	function pageNavigationAction(e) {
 		if (e.type === "click") {
@@ -58,6 +60,7 @@ export function pageNavigation() {
 		}
 	}
 }
+
 // Работа с шапкой при скроле
 export function headerScroll() {
 	addWindowScrollEvent = true;
@@ -93,6 +96,7 @@ export function headerScroll() {
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
 	});
 }
+
 // Прилипающий блок
 export function stickyBlock() {
 	addWindowScrollEvent = true;
@@ -100,27 +104,39 @@ export function stickyBlock() {
 	// data-sticky-header для родителя, учитываем высоту хедера
 	// data-sticky-top="" для родителя, можно указать отступ сверху
 	// data-sticky-bottom="" для родителя, можно указать отступ снизу
+	// data-sticky-left="" для родителя, можно указать отступ слева
+
 	// data-sticky-item для прилипающего блока *
 	function stickyBlockInit() {
 		const stickyParents = document.querySelectorAll('[data-sticky]');
 		if (stickyParents.length) {
 			stickyParents.forEach(stickyParent => {
 				let stickyConfig = {
-					top: stickyParent.dataset.stickyTop ? stickyParent.dataset.stickyTop : 0,
-					bottom: stickyParent.dataset.stickyBottom ? stickyParent.dataset.stickyBottom : 0,
-					header: stickyParent.hasAttribute('data-sticky-header')
+					top: +(stickyParent.dataset.stickyTop ? stickyParent.dataset.stickyTop : 0),
+					bottom: +(stickyParent.dataset.stickyBottom ? stickyParent.dataset.stickyBottom : 0),
+					left: +(stickyParent.dataset.stickyLeft ? stickyParent.dataset.stickyLeft : 0),
+					//header: stickyParent.hasAttribute('data-sticky-header')
 				}
 				stickyBlockItem(stickyParent, stickyConfig);
 			});
 		}
 	}
+
 	function stickyBlockItem(stickyParent, stickyConfig) {
+		//находим блоки sticky
 		const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
-		const headerHeight = stickyConfig.header ? document.querySelector('header.header').offsetHeight : 0;
-		const offsetTop = headerHeight + stickyConfig.top;
+
+		// определяем смещение от верхней границы окна
+		const offsetTop = stickyConfig.top;
+		// начало координат самого дочернего блока
+		const startPoint = stickyBlockItem.getBoundingClientRect().top - +offsetTop;
+
 		document.addEventListener("windowScroll", function (e) {
-			const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
+
+			// конечная точка = (высота родителя + растояние от элемента до начала  viewport + насколько проскроллили) - ( смещение от верхней границы окна + высота  )
 			const endPoint = (stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY) - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
+
+			// дефолтные параметры блока
 			let stickyItemValues = {
 				position: "relative",
 				bottom: "auto",
@@ -128,29 +144,36 @@ export function stickyBlock() {
 				left: "0px",
 				width: "auto"
 			}
-			if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) {
+
+			if (window.scrollY >= stickyBlockItem.getBoundingClientRect().top) {
+				// скролл  >= начальные координаты скрол.блока и меньше чем конечные координаты
 				if (scrollY >= startPoint && scrollY <= endPoint) {
 					stickyItemValues.position = `fixed`;
 					stickyItemValues.bottom = `auto`;
 					stickyItemValues.top = `${offsetTop}px`;
 					stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`;
 					stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
+
 				} else if (scrollY >= endPoint) {
 					stickyItemValues.position = `absolute`;
 					stickyItemValues.bottom = `${stickyConfig.bottom}px`;
 					stickyItemValues.top = `auto`;
-					stickyItemValues.left = `0px`;
+					stickyItemValues.left = `${stickyConfig.left ? stickyConfig.left : 0}px`;
 					stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 				}
+
 			}
 			stickyBlockType(stickyBlockItem, stickyItemValues);
 		});
 	}
+
 	function stickyBlockType(stickyBlockItem, stickyItemValues) {
 		stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
 	}
+
 	stickyBlockInit();
 }
+
 // При подключении модуля обработчик события запустится автоматически
 setTimeout(() => {
 	if (addWindowScrollEvent) {

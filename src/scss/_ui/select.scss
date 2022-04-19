@@ -137,3 +137,46 @@
 ._select-tag {
 	cursor: pointer;
 }
+
+
+//language
+
+.select_language{
+	width: 100%;
+	.select__title {
+		border: 1px solid transparent;
+	}
+	span{
+		font-weight: 700;
+		font-size: rem(16);
+	}
+	.select__value {
+		flex-direction: row;
+		padding-left: 0;
+
+		.select__row{
+			display: flex;
+			gap: rem(10);
+		}
+		&:before,&:after{
+			background-color: $mainColor;
+		}
+	}
+	.select__options {
+		border: none;
+	}
+	.select__option{
+
+		.select__row{
+			display: flex;
+			gap: rem(10);
+
+			.select__asset{
+
+			}
+			.select__text{
+
+			}
+		}
+	}
+}

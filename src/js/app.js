@@ -25,15 +25,15 @@ import * as flsFunctions from "./files/functions.js";
 
 /* 3Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 /* (i) необходимо для корректного отображения webp из css  */
-//flsFunctions.isWebp();
+flsFunctions.isWebp();
 /* 4Добавление класса touch для HTML если браузер мобильный */
-//flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 /* 5Добавление loaded для HTML после полной загрузки страницы */
-//flsFunctions.addLoadedClass();
+flsFunctions.addLoadedClass();
 /* 6Модуль для работы с меню (Бургер) */
  flsFunctions.menuInit();
 /* 7Учет плавающей панели на мобильных устройствах при 100vh */
-// flsFunctions.fullVHfix();
+ flsFunctions.fullVHfix();
 
 /*
 8Модуль работы со спойлерами
@@ -150,7 +150,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // flsScroll.headerScroll();
 
 // 27Функционал липкого блока
-// flsScroll.stickyBlock();
+flsScroll.stickyBlock();
 
 // Галерея ========================================================================================================================================================================================================================================================
 /*

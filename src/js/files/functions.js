@@ -8,19 +8,37 @@ export function isWebp() {
 		};
 		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 	}
+
 	// Добавление класса _webp или _no-webp для HTML
 	testWebP(function (support) {
 		let className = support === true ? 'webp' : 'no-webp';
 		document.documentElement.classList.add(className);
 	});
 }
+
 /* Проверка мобильного браузера */
-export let isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+export let isMobile = {
+	Android: function () {
+		return navigator.userAgent.match(/Android/i);
+	}, BlackBerry: function () {
+		return navigator.userAgent.match(/BlackBerry/i);
+	}, iOS: function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	}, Opera: function () {
+		return navigator.userAgent.match(/Opera Mini/i);
+	}, Windows: function () {
+		return navigator.userAgent.match(/IEMobile/i);
+	}, any: function () {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
+
 /* Добавление класса touch для HTML если браузер мобильный */
 export function addTouchClass() {
 	// Добавление класса _touch для HTML если браузер мобильный
 	if (isMobile.any()) document.documentElement.classList.add('touch');
 }
+
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {
 	window.addEventListener("load", function () {
@@ -29,26 +47,34 @@ export function addLoadedClass() {
 		}, 0);
 	});
 }
+
 // Получение хеша в адресе сайта
 export function getHash() {
-	if (location.hash) { return location.hash.replace('#', ''); }
+	if (location.hash) {
+		return location.hash.replace('#', '');
+	}
 }
+
 // Указание хеша в адресе сайта
 export function setHash(hash) {
 	history.pushState('', '', hash);
 }
+
 // Учет плавающей панели на мобильных устройствах при 100vh
 export function fullVHfix() {
 	const fullScreens = document.querySelectorAll('[data-fullscreen]');
 	if (fullScreens.length && isMobile.any()) {
 		window.addEventListener('resize', fixHeight);
+
 		function fixHeight() {
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}
+
 		fixHeight();
 	}
 }
+
 // Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('_slide')) {
@@ -123,6 +149,7 @@ export let bodyLockToggle = (delay = 500) => {
 	}
 }
 export let bodyUnlock = (delay = 500) => {
+
 	let body = document.querySelector("body");
 	if (bodyLockStatus) {
 		let lock_padding = document.querySelectorAll("[data-lp]");
@@ -141,6 +168,7 @@ export let bodyUnlock = (delay = 500) => {
 	}
 }
 export let bodyLock = (delay = 500) => {
+
 	let body = document.querySelector("body");
 	if (bodyLockStatus) {
 		let lock_padding = document.querySelectorAll("[data-lp]");
@@ -164,7 +192,7 @@ export let bodyLock = (delay = 500) => {
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
 
-Например: 
+Например:
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
 
@@ -223,6 +251,7 @@ export function spollers() {
 				initSpollers(spollersArray, matchMedia);
 			});
 		}
+
 		// Инициализация
 		function initSpollers(spollersArray, matchMedia = false) {
 			spollersArray.forEach(spollersBlock => {
@@ -238,6 +267,7 @@ export function spollers() {
 				}
 			});
 		}
+
 		// Работа с контентом
 		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 			const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
@@ -255,6 +285,7 @@ export function spollers() {
 				});
 			}
 		}
+
 		function setSpollerAction(e) {
 			const el = e.target;
 			if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
@@ -271,6 +302,7 @@ export function spollers() {
 				e.preventDefault();
 			}
 		}
+
 		function hideSpollersBody(spollersBlock) {
 			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active');
 			if (spollerActiveTitle) {
@@ -280,15 +312,16 @@ export function spollers() {
 		}
 	}
 }
+
 // Модуь работы с табами =======================================================================================================================================================================================================================
 /*
 Для родителя табов пишем атрибут data-tabs
 Для родителя заголовков табов пишем атрибут data-tabs-titles
 Для родителя блоков табов пишем атрибут data-tabs-body
 
-Если нужно чтобы табы открывались с анимацией 
+Если нужно чтобы табы открывались с анимацией
 добавляем к data-tabs data-tabs-animate
-По умолчанию, скорость анимации 500ms, 
+По умолчанию, скорость анимации 500ms,
 указать свою скорость можно так: data-tabs-animate="1000"
 
 Если нужно чтобы табы превращались в "спойлеры" на неком размере экранов пишем параметры ширины.
@@ -319,6 +352,7 @@ export function tabs() {
 			initMediaTabs(tabsMedia);
 		}
 	}
+
 	// Инициализация табов с медиа запросами
 	function initMediaTabs(tabsMedia) {
 		const breakpointsArray = [];
@@ -360,6 +394,7 @@ export function tabs() {
 			setTitlePosition(tabsMediaArray, matchMedia);
 		});
 	}
+
 	// Установка позиций заголовков
 	function setTitlePosition(tabsMediaArray, matchMedia) {
 		tabsMediaArray.forEach(tabsMediaItem => {
@@ -380,6 +415,7 @@ export function tabs() {
 			});
 		});
 	}
+
 	// Работа с контентом
 	function initTabs(tabsBlock) {
 		const tabsTitles = tabsBlock.querySelectorAll('[data-tabs-titles]>*');
@@ -403,6 +439,7 @@ export function tabs() {
 			});
 		}
 	}
+
 	function setTabsStatus(tabsBlock) {
 		const tabsTitles = tabsBlock.querySelectorAll('[data-tabs-title]');
 		const tabsContent = tabsBlock.querySelectorAll('[data-tabs-item]');
@@ -413,6 +450,7 @@ export function tabs() {
 				return tabsBlock.dataset.tabsAnimate > 0 ? tabsBlock.dataset.tabsAnimate : 500;
 			}
 		}
+
 		const tabsBlockAnimate = isTabsAnamate(tabsBlock);
 
 		if (tabsContent.length > 0) {
@@ -434,6 +472,7 @@ export function tabs() {
 			});
 		}
 	}
+
 	function setTabsAction(e) {
 		const el = e.target;
 		if (el.closest('[data-tabs-title]')) {
@@ -453,26 +492,46 @@ export function tabs() {
 		}
 	}
 }
+
 // Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
-	let iconMenu = document.querySelector(".icon-menu");
+	let iconMenu = document.querySelector(".menu__icon");
+	let bodyMenu = document.querySelector('.menu__body');
+	let listLinks = document.querySelectorAll('.aside-menu__link');
+
 	if (iconMenu) {
-		iconMenu.addEventListener("click", function (e) {
-			if (bodyLockStatus) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-			}
+		document.addEventListener("click", function (event) {
+			if (event.target.closest('.menu__icon')) showsHidesMenu(iconMenu, bodyMenu, listLinks);
+
+			if (bodyMenu.classList.contains('_active') && !event.target.closest('.menu__body')) showsHidesMenu(iconMenu, bodyMenu, listLinks);
 		});
-	};
+	}
 }
+
+function showsHidesMenu(icon, body, links) {
+	if (bodyLockStatus) {
+		bodyLockToggle();
+		icon.classList.toggle('_active');
+		body.classList.toggle('_active');
+
+		if (!body.classList.contains('_active')) {
+			links.forEach((link) => {
+				link.classList.remove('_active')
+			})
+		}
+	}
+}
+
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");
 }
+
 export function menuClose() {
 	bodyUnlock();
 	document.documentElement.classList.remove("menu-open");
 }
+
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*
 Документация по работе в шаблоне:
@@ -488,11 +547,13 @@ export function showMore() {
 		document.addEventListener("click", showMoreActions);
 		window.addEventListener("resize", showMoreActions);
 	}
+
 	function initItems(showMoreBlocks) {
 		showMoreBlocks.forEach(showMoreBlock => {
 			initItem(showMoreBlock);
 		});
 	}
+
 	function initItem(showMoreBlock) {
 		const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
 		const showMoreButton = showMoreBlock.querySelector('[data-showmore-button]');
@@ -502,6 +563,7 @@ export function showMore() {
 			showMoreButton.hidden = false;
 		}
 	}
+
 	function getHeight(showMoreBlock, showMoreContent) {
 		let hiddenHeight = 0;
 		const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
@@ -520,6 +582,7 @@ export function showMore() {
 		}
 		return hiddenHeight;
 	}
+
 	function getOriginalHeight(showMoreContent) {
 		let hiddenHeight = showMoreContent.offsetHeight;
 		showMoreContent.style.removeProperty('height');
@@ -527,6 +590,7 @@ export function showMore() {
 		showMoreContent.style.height = `${hiddenHeight}px`;
 		return originalHeight;
 	}
+
 	function showMoreActions(e) {
 		const targetEvent = e.target;
 		const targetType = e.type;
@@ -556,8 +620,9 @@ data-close - Атрибут для кнопки, которая закрывае
 data-youtube - Атрибут для кода youtube
 Сниппет (HTML): pl
 */
-import { Popup } from "../libs/popup.js";
-export const initPopups = (logging = false, init = true) => new Popup({ logging: logging, init: init });
+import {Popup} from "../libs/popup.js";
+
+export const initPopups = (logging = false, init = true) => new Popup({logging: logging, init: init});
 
 //================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
@@ -567,22 +632,26 @@ export const initPopups = (logging = false, init = true) => new Popup({ logging:
 export function getDigFromString(item) {
 	return parseInt(item.replace(/[^\d]/g, ''))
 }
+
 // Форматирование цифр типа 100 000 000
 export function getDigFormat(item) {
 	return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
 }
+
 // Убрать класс из всех элементов массива
 export function removeClasses(array, className) {
 	for (var i = 0; i < array.length; i++) {
 		array[i].classList.remove(className);
 	}
 }
+
 // Уникализация массива
 export function uniqArray(array) {
 	return array.filter(function (item, index, self) {
 		return self.indexOf(item) === index;
 	});
 }
+
 // Функция получения индекса внутри родителя
 export function indexInParent(parent, element) {
 	const array = Array.prototype.slice.call(parent.children);

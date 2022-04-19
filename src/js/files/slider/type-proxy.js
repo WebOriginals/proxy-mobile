@@ -22,13 +22,15 @@ export function typeProxy() {
                     slidesPerView: 1,
                 },
 
-
-
                 640: {
                     slidesPerView: 2,
                 },
 
-                1024: {
+                800: {
+                    slidesPerView: 2.7,
+                },
+
+                900: {
                     slidesPerView: 3,
                 },
 
@@ -36,8 +38,12 @@ export function typeProxy() {
                     slidesPerView: 4,
                 },
 
+                2200: {
+                    slidesPerView: 5,
+                },
+
                 2500: {
-                    slidesPerView: 8,
+                    slidesPerView: 7,
                 },
 
             },

@@ -1,29 +1,37 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
-function showsHidesMenu(icon, body, links) {
-    if (bodyLockStatus) {
-        bodyLockToggle();
-        icon.classList.toggle('_active');
-        body.classList.toggle('_active');
 
-        if (!body.classList.contains('_active')) {
-            links.forEach((link) => {
-                link.classList.remove('_active')
-            })
-        }
+
+const addSticky = function () {
+    if (window.outerWidth >= 1201 && document.querySelector('.aside-sticky')) {
+        const aside = document.querySelector('.aside');
+        const form = document.querySelector('.aside-sticky');
+        aside.setAttribute('data-sticky', '')
+        //aside.setAttribute('data-sticky-header', '')
+        aside.setAttribute('data-sticky-top', '17')
+        //aside.setAttribute('data-sticky-left', '15')
+        form.setAttribute('data-sticky-item', '')
     }
 }
-export function menuInit() {
-    let iconMenu = document.querySelector(".menu__icon");
-    let bodyMenu = document.querySelector('.menu__body');
-    let listLinks = document.querySelectorAll('.aside-menu__link');
+addSticky();
 
-    if (iconMenu) {
-        document.addEventListener("click", function (event) {
-            if (event.target.closest('.menu__icon')) showsHidesMenu(iconMenu, bodyMenu, listLinks);
+const userSettingsOpen = function () {
+    if (document.querySelector('.header-lk-settings')) {
+        const body = document.querySelector('.header-lk-settings__block-hidden');
+        const name = document.querySelector('.header-lk-settings');
+        const icon = document.querySelector('.header-lk-settings svg.user');
 
-            if (bodyMenu.classList.contains('_active') && !event.target.closest('.menu__body')) showsHidesMenu(iconMenu, bodyMenu, listLinks);
+        name.addEventListener("click", function (event) {
+            console.log(event.target)
+            // if(){
+            //
+            // }
+            body.classList.toggle('open');
+            console.log(body.classList.contains('open'))
         });
+
+
     }
 }
+userSettingsOpen();
