@@ -22,4 +22,10 @@ mixin crumbs(title)
                 li
                     a(href="#")= title
 
-
+mixin modalTypesPayment
+    .serviceTypesPayment-item
+        input(type='radio' name='balance' value='1' checked)
+        .serviceTypesPayment-item__body
+            .serviceTypesPayment-item__img
+                img.lazyAll(data-src=`img/png/Stripe.webp` alt=`Баланс Sms-Activate`)
+            .serviceTypesPayment-item__name Баланс Sms-Activate

@@ -132,7 +132,7 @@ import './files/scroll/simplebar.js';
 Документация плагина: https://github.com/verlok/vanilla-lazyload
 Сниппет(HTML):
 */
-//import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // 23Функции работы скроллом ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import * as flsScroll from "./files/scroll/scroll.js";

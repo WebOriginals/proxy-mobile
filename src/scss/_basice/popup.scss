@@ -68,7 +68,7 @@ body.popup-show::after {
 .partners {
   background: #00000073;
 
-  .popup__close{
+  .popup__close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -105,7 +105,7 @@ body.popup-show::after {
     display: grid;
     grid-gap: 30px;
 
-    .wr{
+    .wr {
       display: grid;
       grid-gap: 5px;
     }
@@ -130,8 +130,8 @@ body.popup-show::after {
 
 
 //buyProxy
-.buyProxy{
-  &-content{
+.buyProxy {
+  &-content {
     background-color: $color_1;
     border-radius: rem(5);
     max-width: rem(733);
@@ -143,7 +143,8 @@ body.popup-show::after {
       padding: rem(30);
     }
   }
-  .popup__close{
+
+  .popup__close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -162,24 +163,26 @@ body.popup-show::after {
     }
   }
 
-  &__title{
+  &__title {
     @include adaptiveValue(font-size, 30, 26);
     font-weight: 700;
     @include adaptiveValue(margin-bottom, 44, 34);
   }
 
-  &-form{
+  &-form {
     display: grid;
     grid-gap: rem(32);
 
-    p{
-      @include adaptiveValue(font-size, 16,16);
+    p {
+      @include adaptiveValue(font-size, 16, 16);
     }
-    &__radio{
-      p{
+
+    &__radio {
+      p {
         margin-bottom: rem(20);
       }
-      &-body{
+
+      &-body {
         height: rem(42);
         display: flex;
         align-items: center;
@@ -190,19 +193,21 @@ body.popup-show::after {
         position: relative;
 
         @include mq('tablet-small') {
-          width:80%;
+          width: 80%;
         }
-        input{
+
+        input {
           display: none;
 
-          &:checked + label{
+          &:checked + label {
             font-weight: 700;
             color: $color_1;
             background-color: $color_7;
             border-radius: rem(5);
           }
         }
-        label{
+
+        label {
           @include adaptiveValue(font-size, 18, 14);
           //font-weight: 700;
           //background-color: $color_7;
@@ -212,7 +217,7 @@ body.popup-show::after {
           justify-content: center;
           flex: 1 1 33.33%;
 
-          &:hover{
+          &:hover {
             font-weight: 700;
             color: $color_1;
             background-color: $color_7;
@@ -232,9 +237,10 @@ body.popup-show::after {
         //}
       }
     }
-    &__select-tuo{
+
+    &__select-tuo {
       display: grid;
-      grid-gap:rem(20) rem(30);
+      grid-gap: rem(20) rem(30);
       max-width: rem(430);
       @include mq('tablet-small') {
         grid-template-columns: 1fr 1fr;
@@ -242,28 +248,272 @@ body.popup-show::after {
         grid-auto-flow: column;
       }
     }
-    &__select-three{
+
+    &__select-three {
       display: grid;
-      grid-gap:rem(15) rem(30);
+      grid-gap: rem(15) rem(30);
       @include mq('tablet-small') {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-auto-flow: column;
       }
     }
-    &__botton{
+
+    &__botton {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: rem(30);
       align-items: center;
     }
-    &__result{
+
+    &__result {
       @include adaptiveValue(font-size, 18, 16);
       font-weight: 700;
 
-      span{
+      span {
         @include adaptiveValue(font-size, 30, 34);
+      }
+    }
+  }
+}
+
+//paymentMethod
+.paymentMethod {
+  @include mq('tablet') {
+    padding: rem(30) rem(20);
+  }
+  @include mq('tablet-990') {
+    padding: rem(30);
+  }
+
+  &-content {
+    padding: 0;
+    background-color: $color_7;
+    border-radius: rem(5);
+    max-width: rem(1000);
+  }
+
+  .popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    outline: none;
+    @include mq('tablet') {
+      background-color: $color_1;
+      border-radius: 50%;
+      width: rem(44);
+      height: rem(44);
+      top: -20px;
+      right: -20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &-form {
+    @include mq('tablet') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__left {
+      @include adaptiveValue(padding-top, 36, 25);
+      @include adaptiveValue(padding-bottom, 36, 25);
+      @include adaptiveValue(padding-left, 22, 15);
+      @include adaptiveValue(padding-right, 22, 15);
+      color: $color_1;
+
+      .serviceTypesPayment-item{
+        position: relative;
+
+
+        input{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          &:checked + .serviceTypesPayment-item__body{
+            border: 2px solid $color_6;
+          }
+        }
+        &__body{
+          background-color: $color_1;
+          padding: em(12);
+          color: $mainColor;
+          display: grid;
+          grid-gap: rem(5);
+          max-height: rem(100);
+          border-radius: rem(5);
+          overflow: hidden;
+          border: 2px solid transparent;
+          @include mq('tablet-wide'){
+            max-height: rem(90);
+          }
+        }
+        &__img{
+          img{
+            max-width: 100%;
+          }
+
+        }
+        &__name{
+          font-size: rem(14);
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__right {
+      border-radius: rem(5);
+      background-color: $color_1;
+      @include adaptiveValue(padding-top, 36, 25);
+      @include adaptiveValue(padding-bottom, 36, 25);
+      @include adaptiveValue(padding-left, 22, 15);
+      @include adaptiveValue(padding-right, 22, 15);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+
+      h5{
+        margin-bottom: rem(16);
+        @include adaptiveValue(margin-top, 46, 35);
+      }
+
+    }
+
+    &__title {
+      @include adaptiveValue(font-size, 30, 26);
+      font-weight: 700;
+    }
+
+    &__id {
+      color: $color_3;
+      @include adaptiveValue(font-size, 18, 16);
+    }
+
+    h5, p, label, &__price, &__btn, &__input, &__top {
+      grid-column: span 2;
+    }
+    &__top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: rem(20);
+    }
+    &__price{
+      height: rem(48);
+      border-radius: rem(5);
+      border: 1px solid $color_3;
+      padding: rem(15) rem(40) rem(15) rem(15) ;
+      font-size: rem(20);
+    }
+
+    &__result{
+      font-size: rem(18);
+      font-weight: 700;
+    }
+
+    &__number{
+      font-size: rem(30);
+      font-weight: 700;
+    }
+
+    &__btn{
+      margin-top: rem(30);
+    }
+
+    &__search{
+      margin-top: rem(20);
+      position: relative;
+
+      input{
+        padding: rem(0) rem(40) 0 rem(10);
+        width: 100%;
+        border-radius: rem(5);
+        border: 1px solid $color_1;
+        height: rem(30);
+        color: $color_1;
+        background-color: transparent;
+        &::placeholder{
+          color: $color_1;
+        }
+      }
+
+      button{
+        z-index: 2;
+        position: absolute;
+        top: rem(3);
+        right: rem(5);
+      }
+    }
+
+    &__filter{
+      display: flex;
+      gap: rem(15);
+      flex-wrap: wrap;
+      margin: rem(40) 0 rem(30);
+      button{
+        border-radius: rem(20);
+        height: rem(33);
+        border: 1px solid $color_1;
+        padding: 0 rem(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color_1;
+        font-size: rem(14);
+
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: $color_6;
+            border: 1px solid $color_6;
+          }
+        }
+
+        &.active{
+          background-color: $color_6;
+          border: 1px solid $color_6;
+        }
+      }
+    }
+
+    &__service{
+      max-height: rem(280);
+      overflow-y: auto;
+      padding-right: rem(30);
+
+      .simplebar-content{
+        display: grid;
+        grid-gap: rem(14);
+        grid-template-columns: 1fr 1fr;
+
+        &:before,&:after{
+          display: none;
+        }
+
+      }
+
+    }
+
+    &__input{
+      position: relative;
+      display: grid;
+      grid-gap: rem(20);
+      margin-top: rem(35);
+      @include adaptiveValue(margin-bottom, 67, 35);
+      input{
+        width: 100%;
+      }
+      span{
+        position: absolute;
+        bottom: rem(15);
+        right: rem(10);
+        font-size: rem(20);
       }
     }
   }

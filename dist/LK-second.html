@@ -183,7 +183,7 @@
         </div>
       </main>
     </div>
-    <div class="popup-link" data-popup="#popup">balances</div>
+    <div class="popup-link" data-popup="#paymentMethod">balances</div>
     <div class="popup-link" data-popup="#buyProxy">balances</div>
     <div class="popup partners" id="popup" aria-hidden="true">
       <div class="popup__wrapper">
@@ -304,6 +304,131 @@
               <div class="buyProxy-form__botton">
                 <div class="buyProxy-form__result">Итого: <span>150 Р</span></div>
                 <button class="button-o buyProxy__btn" type="submit">отправить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup paymentMethod" id="paymentMethod" aria-hidden="true">
+      <div class="popup__wrapper">
+        <div class="popup__content paymentMethod-content">
+          <button class="popup__close" data-close type="button">
+            <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.5">
+                <path d="M8.50698 7.50027L14.4284 1.57884C14.5454 1.4422 14.6066 1.26643 14.5996 1.08666C14.5927 0.906894 14.5182 0.736366 14.391 0.609156C14.2637 0.481945 14.0932 0.407422 13.9135 0.400478C13.7337 0.393534 13.5579 0.454682 13.4213 0.571701L7.49984 6.49313L1.57841 0.564558C1.44391 0.430055 1.26149 0.354492 1.07127 0.354492C0.881054 0.354492 0.69863 0.430055 0.564127 0.564558C0.429624 0.69906 0.354062 0.881485 0.354062 1.0717C0.354062 1.26192 0.429624 1.44434 0.564127 1.57884L6.4927 7.50027L0.564127 13.4217C0.489354 13.4857 0.428626 13.5645 0.385752 13.6531C0.342878 13.7418 0.318785 13.8383 0.314985 13.9367C0.311186 14.035 0.327761 14.1331 0.363672 14.2248C0.399582 14.3164 0.454052 14.3997 0.523663 14.4693C0.593273 14.5389 0.676521 14.5934 0.768182 14.6293C0.859843 14.6652 0.957937 14.6818 1.05631 14.678C1.15468 14.6742 1.2512 14.6501 1.33982 14.6072C1.42844 14.5643 1.50724 14.5036 1.57127 14.4288L7.49984 8.50741L13.4213 14.4288C13.5579 14.5459 13.7337 14.607 13.9135 14.6001C14.0932 14.5931 14.2637 14.5186 14.391 14.3914C14.5182 14.2642 14.5927 14.0936 14.5996 13.9139C14.6066 13.7341 14.5454 13.5583 14.4284 13.4217L8.50698 7.50027Z" fill="black"></path>
+              </g>
+            </svg>
+          </button>
+          <div class="popup__body paymentMethod__body">
+            <form class="paymentMethod__form paymentMethod-form" action="#" id="paymentMethod__form" autocomplete="off" method="post">
+              <div class="paymentMethod-form__left">
+                <div class="paymentMethod-form__title">Способы пополнения</div>
+                <div class="paymentMethod-form__search">
+                  <input placeholder="Поиск">
+                  <button type="submit">
+                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path id="icon/action/search_24px" fill-rule="evenodd" clip-rule="evenodd" d="M14.9649 14.255H15.7549L20.7449 19.255L19.2549 20.745L14.2549 15.755V14.965L13.9849 14.685C12.8449 15.665 11.3649 16.255 9.75488 16.255C6.16488 16.255 3.25488 13.345 3.25488 9.755C3.25488 6.165 6.16488 3.255 9.75488 3.255C13.3449 3.255 16.2549 6.165 16.2549 9.755C16.2549 11.365 15.6649 12.845 14.6849 13.985L14.9649 14.255ZM5.25488 9.755C5.25488 12.245 7.26488 14.255 9.75488 14.255C12.2449 14.255 14.2549 12.245 14.2549 9.755C14.2549 7.26501 12.2449 5.255 9.75488 5.255C7.26488 5.255 5.25488 7.26501 5.25488 9.755Z" fill="white"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="paymentMethod-form__filter">
+                  <button class="active">Все</button>
+                  <button>Stripe</button>
+                  <button>Qiwi</button>
+                  <button>Банковские карты</button>
+                  <button>Электронные кошельки</button>
+                  <button>Банковские переводы</button>
+                  <button>Криптовалюта</button>
+                </div>
+                <div class="paymentMethod-form__service" data-simplebar>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                  <div class="serviceTypesPayment-item">
+                    <input type="radio" name="balance" value="1" checked="checked"/>
+                    <div class="serviceTypesPayment-item__body">
+                      <div class="serviceTypesPayment-item__img"><img class="lazyAll" data-src="img/png/Stripe.webp" alt="Баланс Sms-Activate"/></div>
+                      <div class="serviceTypesPayment-item__name">Баланс Sms-Activate</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="paymentMethod-form__right">
+                <div class="paymentMethod-form__top">
+                  <div class="paymentMethod-form__title">Пополнить баланс</div>
+                  <div class="paymentMethod-form__id">ID:845621458</div>
+                </div>
+                <h5>Пополнение с помощью Qiwi</h5>
+                <p>Принимаем оплату <b>ТОЛЬКО</b> в рублях. Платежи, сделанные напрямую/в обход формы оплаты на сайте, зачислены не будут. Прямое зачисление на кошелек. Комиссия 6%</p><br>
+                <p>Минимальная сумма оплаты - 10 руб.</p>
+                <div class="paymentMethod-form__input">
+                  <label for="price">Укажите сумму пополнения</label>
+                  <input class="paymentMethod-form__price" id="price" placeholder="500"><span>₽ $ ₣ €</span>
+                </div>
+                <div class="paymentMethod-form__result">Итого к оплате:</div>
+                <div class="paymentMethod-form__number">5 000 531.91 Р</div>
+                <button class="button-o paymentMethod-form__btn" type="submit">отправить заявку</button>
               </div>
             </form>
           </div>
