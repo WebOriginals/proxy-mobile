@@ -473,6 +473,8 @@
         </div>
       </footer>
     </div>
+    <div class="popup-link" data-popup="#popup">balances</div>
+    <div class="popup-link" data-popup="#buyProxy">balances</div>
     <div class="popup partners" id="popup" aria-hidden="true">
       <div class="popup__wrapper">
         <div class="popup__content partners-content">
@@ -500,6 +502,99 @@
                 <input class="input" id="telegram" placeholder="Номер или @юзернейм" required>
               </div>
               <button class="button-r partners__btn" type="submit">отправить заявку</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup buyProxy" id="buyProxy" aria-hidden="true">
+      <div class="popup__wrapper">
+        <div class="popup__content buyProxy-content">
+          <button class="popup__close" data-close type="button">
+            <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.5">
+                <path d="M8.50698 7.50027L14.4284 1.57884C14.5454 1.4422 14.6066 1.26643 14.5996 1.08666C14.5927 0.906894 14.5182 0.736366 14.391 0.609156C14.2637 0.481945 14.0932 0.407422 13.9135 0.400478C13.7337 0.393534 13.5579 0.454682 13.4213 0.571701L7.49984 6.49313L1.57841 0.564558C1.44391 0.430055 1.26149 0.354492 1.07127 0.354492C0.881054 0.354492 0.69863 0.430055 0.564127 0.564558C0.429624 0.69906 0.354062 0.881485 0.354062 1.0717C0.354062 1.26192 0.429624 1.44434 0.564127 1.57884L6.4927 7.50027L0.564127 13.4217C0.489354 13.4857 0.428626 13.5645 0.385752 13.6531C0.342878 13.7418 0.318785 13.8383 0.314985 13.9367C0.311186 14.035 0.327761 14.1331 0.363672 14.2248C0.399582 14.3164 0.454052 14.3997 0.523663 14.4693C0.593273 14.5389 0.676521 14.5934 0.768182 14.6293C0.859843 14.6652 0.957937 14.6818 1.05631 14.678C1.15468 14.6742 1.2512 14.6501 1.33982 14.6072C1.42844 14.5643 1.50724 14.5036 1.57127 14.4288L7.49984 8.50741L13.4213 14.4288C13.5579 14.5459 13.7337 14.607 13.9135 14.6001C14.0932 14.5931 14.2637 14.5186 14.391 14.3914C14.5182 14.2642 14.5927 14.0936 14.5996 13.9139C14.6066 13.7341 14.5454 13.5583 14.4284 13.4217L8.50698 7.50027Z" fill="black"></path>
+              </g>
+            </svg>
+          </button>
+          <div class="popup__body buyProxy__body">
+            <div class="buyProxy__title">Купить мобильные прокси</div>
+            <form class="buyProxy__form buyProxy-form" action="#" id="buyProxy__form" autocomplete="off" method="post">
+              <div class="buyProxy-form__radio">
+                <p>1. Выберите тип прокси</p>
+                <div class="buyProxy-form__radio-body">
+                  <input id="by_services" type="radio" name="typeProxy" value="По сервисам" checked>
+                  <label for="by_services">По сервисам</label>
+                  <input id="with_expectation" type="radio" name="typeProxy" value="С ожиданием">
+                  <label for="with_expectation">С ожиданием</label>
+                  <input id="without_waiting" type="radio" name="typeProxy" value="Без ожидания">
+                  <label for="without_waiting">Без ожидания</label>
+                </div>
+              </div>
+              <div class="buyProxy-form__select-tuo">
+                <p>2.  Выберите сервис</p>
+                <select class="arrow-o">
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option data-class="disabled">4</option>
+                </select>
+                <p>Ротацию</p>
+                <select class="arrow-o">
+                  <option>5 минут</option>
+                  <option>10 минут</option>
+                  <option selected>15 минут</option>
+                </select>
+              </div>
+              <div class="buyProxy-form__select-three">
+                <p>3.  Выберите страну</p>
+                <select class="arrow-o">
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option data-class="disabled">4</option>
+                </select>
+                <p>Город</p>
+                <select class="arrow-o">
+                  <option>5 минут</option>
+                  <option>10 минут</option>
+                  <option selected>15 минут</option>
+                </select>
+                <p>Оператора</p>
+                <select class="arrow-o">
+                  <option>5 минут</option>
+                  <option>10 минут</option>
+                  <option selected>15 минут</option>
+                </select>
+              </div>
+              <div class="buyProxy-form__radio">
+                <p>4.  Выберите тип подключения</p>
+                <div class="buyProxy-form__radio-body">
+                  <input id="HTTP" type="radio" name="typeProxyСonnection" value="HTTP" checked>
+                  <label for="HTTP">HTTP</label>
+                  <input id="SOCKS5" type="radio" name="typeProxyСonnection" value="SOCKS5">
+                  <label for="SOCKS5">SOCKS5</label>
+                </div>
+              </div>
+              <div class="buyProxy-form__select-tuo">
+                <p>5.  Укажите период работы</p>
+                <select class="arrow-o">
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option data-class="disabled">4</option>
+                </select>
+                <p></p>
+                <select class="arrow-o">
+                  <option>5 минут</option>
+                  <option>10 минут</option>
+                  <option selected>15 минут</option>
+                </select>
+              </div>
+              <div class="buyProxy-form__botton">
+                <div class="buyProxy-form__result">Итого: <span>150 Р</span></div>
+                <button class="button-o buyProxy__btn" type="submit">отправить заявку</button>
+              </div>
             </form>
           </div>
         </div>

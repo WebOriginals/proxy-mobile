@@ -21,15 +21,23 @@ const userSettingsOpen = function () {
         const body = document.querySelector('.header-lk-settings__block-hidden');
         const name = document.querySelector('.header-lk-settings__title');
         const icon = document.querySelector('.header-lk-settings svg.user');
+        const list = document.querySelector('.header-lk-settings');
 
         name.addEventListener("click", function (event) {
             body.classList.toggle('open');
             console.log(body.classList.contains('open'))
         });
+        icon.addEventListener("click", function (event) {
+            body.classList.toggle('open');
+        });
+
         // document.addEventListener("click", function (event) {
-        //     if (body.classList.contains('open')) {
+        //     console.log(event.target !== list)
+        //     console.log(event.target )
         //
-        //     }
+        //     // if (body.classList.contains('open')) {
+        //     //     body.classList.remove('open');
+        //     // }
         // });
     }
 }
