@@ -19,19 +19,18 @@ addSticky();
 const userSettingsOpen = function () {
     if (document.querySelector('.header-lk-settings')) {
         const body = document.querySelector('.header-lk-settings__block-hidden');
-        const name = document.querySelector('.header-lk-settings');
+        const name = document.querySelector('.header-lk-settings__title');
         const icon = document.querySelector('.header-lk-settings svg.user');
 
         name.addEventListener("click", function (event) {
-            console.log(event.target)
-            // if(){
-            //
-            // }
             body.classList.toggle('open');
             console.log(body.classList.contains('open'))
         });
-
-
+        // document.addEventListener("click", function (event) {
+        //     if (body.classList.contains('open')) {
+        //
+        //     }
+        // });
     }
 }
 userSettingsOpen();
