@@ -63,14 +63,14 @@ style(type="text/css").
 
     // Spollers
     h1 Spollers
-    .spollers.spoller-no-border-red-arrow(data-spollers)
-        .spollers__title(data-spoller) Отлёжка
-        .spollers__body
-            +checkbox_arrow('q', 'q','Средняя цена 1')
-            +checkbox_arrow('w', 'w','Средняя цена 2')
-            +checkbox_arrow('e', 'e','Средняя цена 3')
-            +checkbox_arrow('r', 'r','Средняя цена 4')
-            +checkbox_arrow('t', 't','Средняя цена 5')
+    //.spollers.spoller-no-border-red-arrow(data-spollers)
+    //    .spollers__title(data-spoller) Отлёжка
+    //    .spollers__body
+    //        +checkbox_arrow('q', 'q','Средняя цена 1')
+    //        +checkbox_arrow('w', 'w','Средняя цена 2')
+    //        +checkbox_arrow('e', 'e','Средняя цена 3')
+    //        +checkbox_arrow('r', 'r','Средняя цена 4')
+    //        +checkbox_arrow('t', 't','Средняя цена 5')
 
 
     br
@@ -217,7 +217,17 @@ style(type="text/css").
     hr(style='border-bottom: 1px solid #000;')
     br
     br
-    //loading
+    span.input.input--hoshi
+        input#input-4.input__field.input__field--hoshi(type='text')
+        label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='input-4')
+            span.input__label-content.input__label-content--hoshi Name
+    br
+    br
+    hr(style='border-bottom: 1px solid #000;')
+    br
+    br
+
+//loading
     h1 loading
     .point-loading
         span.point

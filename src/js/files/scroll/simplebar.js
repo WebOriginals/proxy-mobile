@@ -21,3 +21,11 @@ if(window.outerWidth < 600 && document.querySelector('.tabs__navigation')){
 }
 
 
+
+if (window.outerWidth < 600 && document.querySelector('.statistics-table__body')) {
+    const table = document.querySelectorAll('.statistics-table__body');
+    table.forEach((elem) => {
+        elem.setAttribute('data-simplebar', '')
+    })
+}
+

@@ -4,10 +4,11 @@
   @include mq('desktop') {
     grid-template-columns: 300px 1fr;
   }
-  .__co{
+  .__container-lk{
     padding: 0 rem(15);
     @include mq('tablet-wide') {
       padding: 0 rem(32);
+      max-width: 1500px;
     }
   }
 }

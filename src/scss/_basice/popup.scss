@@ -64,6 +64,7 @@ body.popup-show::after {
   }
 }
 
+
 //partners
 .partners {
   background: #00000073;
@@ -127,7 +128,6 @@ body.popup-show::after {
     }
   }
 }
-
 
 //buyProxy
 .buyProxy {
@@ -327,20 +327,22 @@ body.popup-show::after {
       @include adaptiveValue(padding-right, 22, 15);
       color: $color_1;
 
-      .serviceTypesPayment-item{
+      .serviceTypesPayment-item {
         position: relative;
 
 
-        input{
+        input {
           position: absolute;
           width: 100%;
           height: 100%;
           opacity: 0;
-          &:checked + .serviceTypesPayment-item__body{
+
+          &:checked + .serviceTypesPayment-item__body {
             border: 2px solid $color_6;
           }
         }
-        &__body{
+
+        &__body {
           background-color: $color_1;
           padding: em(12);
           color: $mainColor;
@@ -350,17 +352,19 @@ body.popup-show::after {
           border-radius: rem(5);
           overflow: hidden;
           border: 2px solid transparent;
-          @include mq('tablet-wide'){
+          @include mq('tablet-wide') {
             max-height: rem(90);
           }
         }
-        &__img{
-          img{
+
+        &__img {
+          img {
             max-width: 100%;
           }
 
         }
-        &__name{
+
+        &__name {
           font-size: rem(14);
           font-weight: 700;
         }
@@ -378,7 +382,7 @@ body.popup-show::after {
       grid-template-columns: 1fr auto;
       align-items: center;
 
-      h5{
+      h5 {
         margin-bottom: rem(16);
         @include adaptiveValue(margin-top, 46, 35);
       }
@@ -398,40 +402,42 @@ body.popup-show::after {
     h5, p, label, &__price, &__btn, &__input, &__top {
       grid-column: span 2;
     }
-    &__top{
+
+    &__top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: rem(20);
     }
-    &__price{
+
+    &__price {
       height: rem(48);
       border-radius: rem(5);
       border: 1px solid $color_3;
-      padding: rem(15) rem(40) rem(15) rem(15) ;
+      padding: rem(15) rem(40) rem(15) rem(15);
       font-size: rem(20);
     }
 
-    &__result{
+    &__result {
       font-size: rem(18);
       font-weight: 700;
     }
 
-    &__number{
+    &__number {
       font-size: rem(30);
       font-weight: 700;
     }
 
-    &__btn{
+    &__btn {
       margin-top: rem(30);
     }
 
-    &__search{
+    &__search {
       margin-top: rem(20);
       position: relative;
 
-      input{
+      input {
         padding: rem(0) rem(40) 0 rem(10);
         width: 100%;
         border-radius: rem(5);
@@ -439,12 +445,13 @@ body.popup-show::after {
         height: rem(30);
         color: $color_1;
         background-color: transparent;
-        &::placeholder{
+
+        &::placeholder {
           color: $color_1;
         }
       }
 
-      button{
+      button {
         z-index: 2;
         position: absolute;
         top: rem(3);
@@ -452,12 +459,13 @@ body.popup-show::after {
       }
     }
 
-    &__filter{
+    &__filter {
       display: flex;
       gap: rem(15);
       flex-wrap: wrap;
       margin: rem(40) 0 rem(30);
-      button{
+
+      button {
         border-radius: rem(20);
         height: rem(33);
         border: 1px solid $color_1;
@@ -475,24 +483,24 @@ body.popup-show::after {
           }
         }
 
-        &.active{
+        &.active {
           background-color: $color_6;
           border: 1px solid $color_6;
         }
       }
     }
 
-    &__service{
+    &__service {
       max-height: rem(280);
       overflow-y: auto;
       padding-right: rem(30);
 
-      .simplebar-content{
+      .simplebar-content {
         display: grid;
         grid-gap: rem(14);
         grid-template-columns: 1fr 1fr;
 
-        &:before,&:after{
+        &:before, &:after {
           display: none;
         }
 
@@ -500,16 +508,18 @@ body.popup-show::after {
 
     }
 
-    &__input{
+    &__input {
       position: relative;
       display: grid;
       grid-gap: rem(20);
       margin-top: rem(35);
       @include adaptiveValue(margin-bottom, 67, 35);
-      input{
+
+      input {
         width: 100%;
       }
-      span{
+
+      span {
         position: absolute;
         bottom: rem(15);
         right: rem(10);
@@ -517,4 +527,111 @@ body.popup-show::after {
       }
     }
   }
+}
+
+
+//entrance
+.entrance {
+  &-content {
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color_1;
+    max-width: 500px;
+    padding: 40px 3% 60px;
+    @include maq('tablet-wide') {
+      padding: 40px 15px 60px;
+    }
+  }
+
+  .popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+  }
+
+  &__body {
+
+  }
+
+  &__title {
+    @include adaptiveValue(font-size,49,36);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: grid;
+    grid-gap: rem(20);
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+
+  &__stupid{
+    text-align: center;
+    text-decoration: underline !important;
+    font-size: 12px;
+  }
+  &__noAccount{
+    text-align: center;
+    a{
+      color: $color_6;
+      text-decoration: underline !important;
+    }
+  }
+  &__tel{
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 60px;
+      height: 2px;
+      background: $color_1;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 6px;
+      width: 60px;
+      height: 2px;
+      background: $color_1;
+    }
+
+  }
+  &__ic-tel{
+    text-align: center;
+    margin: auto;
+  }
+
+  .eyes{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    z-index: 9;
+
+    & .close{
+      display: none;
+    }
+    &.opp{
+
+      .open{
+        display: none;
+      }
+      .close{
+        display: block;
+      }
+    }
+
+  }
+
 }

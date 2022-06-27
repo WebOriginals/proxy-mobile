@@ -32,9 +32,18 @@ aside.aside.menu__body
                 a(href="#").aside-menu__link.bold Резедентские прокси
                 a(href="#").aside-menu__link.bold Серверные прокси
 
-            nav.aside__menu.aside-menu
-                a(href="#").aside-menu__link.regular  История
-                a(href="#").aside-menu__link.regular  API
-                a(href="#").aside-menu__link.regular  Поддержка
-                a(href="#").aside-menu__link.regular  Инструкции
-                a(href="#").aside-menu__link.regular  Уведомления <span class="number">14</span>
+            ul.aside__menu.aside-menu(data-spollers data-one-spoller)
+                li
+                     a(href="#").aside-menu__link.regular  История
+                li.spollers__title.aside-menu__link.regular.secondLevel(data-spoller) API
+                ul.list-secondLevel
+                    li
+                        a(href="#").aside-menu__link.regular  По API
+                    li
+                        a(href="#").aside-menu__link.regular  По  ссылке
+                li
+                    a(href="#").aside-menu__link.regular  Поддержка
+                li
+                    a(href="#").aside-menu__link.regular  Инструкции
+                li
+                    a(href="#").aside-menu__link.regular  Уведомления <span class="number">14</span>

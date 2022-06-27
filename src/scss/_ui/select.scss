@@ -217,3 +217,22 @@
     flex-direction: row;
   }
 }
+
+.select_border-green{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  .select__body {
+    min-width: 150px;
+  }
+  .select__value {
+    flex-direction: row;
+    &::before, &::after {
+      right: 14px;
+      width: 8px;
+    }
+  }
+  .select__title{
+    height: rem(36);
+    border: none;
+  }
+
+}

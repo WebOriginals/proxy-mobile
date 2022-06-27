@@ -43,7 +43,7 @@ export function typeProxy() {
                 },
 
                 2500: {
-                    slidesPerView: 7,
+                    slidesPerView: 6,
                 },
 
             },

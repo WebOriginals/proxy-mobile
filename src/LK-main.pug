@@ -2,12 +2,12 @@ include pug/mixins
 doctype html
 html(lang="ru")
     +head('Главная')
-    body(style="background: #E5E5E5;")
+    body
         .wrapper.page-grid
             include pug/LK-main/aside
             main.page.lk-page
                 include pug/LK-main/header
-                .__co
+                .__container-lk
                     include pug/LK-main/baneer-settings
                     include pug/LK-main/slider-type-proxy
 

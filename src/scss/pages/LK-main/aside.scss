@@ -28,6 +28,7 @@
       transition: .5s;
       font-size: rem(18);
       padding: rem(5) 0;
+      color: $color_1;
 
       @media (any-hover: hover) {
         &:hover {
@@ -39,8 +40,33 @@
           }
         }
       }
+      &.secondLevel{
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          background-color: $color_6;
+          height: 2px;
+          width: 10px;
+          transition: transform 0.5s ease 0s;
+        }
+      }
+
+
+      &._spoller-active  {
+       + .list-secondLevel{
+          display: grid;
+          grid-gap: rem(8);
+        }
+      }
     }
 
+    .list-secondLevel{
+      padding-left: rem(10);
+      border-left: 1px solid $color_6;
+    }
     .bold{
       font-weight: 700;
     }

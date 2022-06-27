@@ -61,11 +61,14 @@ $mobileSmall: em(479.98); // Телефоны S
 
 body {
   // Скролл заблокирован
+  background-color: #F6F7F9;
+
   .lock & {
     overflow: hidden;
     touch-action: none;
   }
 }
+
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
   min-height: 100%;
@@ -75,18 +78,22 @@ body {
   // Сайт загружен
   .loaded & {
   }
+
   // Прижимаем footer
   > main {
     flex: 1 1 auto;
   }
+
   // Фикс для слайдеров
   > * {
     min-width: 0;
   }
 }
-.lk-page{
+
+.lk-page {
   padding-bottom: 50px;
 }
+
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 
 /*
@@ -135,7 +142,6 @@ body {
 }
 
 
-
 // стили заголовков, кнопок, списков
 @import "_configuration/originStyle";
 
@@ -152,7 +158,6 @@ body {
 //@import "_basice/title";
 //@import "_basice/pagging";
 @import "_basice/popup";
-
 
 
 // Подключение базовых для () стилей из _ui
@@ -175,11 +180,12 @@ body {
 //@import "_ui/showmore";
 //споллеры
 @import "_ui/spoller";
+///input
+//@import "_ui/input";
 //табы
 @import "_ui/tabs";
 //описание товаров
 //@import "_ui/tippy";
-
 
 
 //main
@@ -201,3 +207,23 @@ body {
 @import "pages/LK-main/text";
 @import "pages/LK-main/spoller";
 @import "pages/LK-main/notifications";
+
+
+//Lk-blog
+@import "pages/LK-blog/aside";
+@import "pages/LK-blog/blog";
+@import "pages/LK-blog/grid";
+@import "pages/LK-blog/blogInternal";
+
+
+//LK-ref-link
+@import "pages/LK-ref-link/text";
+@import "pages/LK-ref-link/statistics";
+
+
+//LK-ref-api
+@import "pages/LK-ref-api/tab";
+
+
+//LK-statistics-api
+@import "pages/LK-statistics-api/tabl";
