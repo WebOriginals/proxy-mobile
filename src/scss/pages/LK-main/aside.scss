@@ -27,7 +27,7 @@
     &__link{
       transition: .5s;
       font-size: rem(18);
-      padding: rem(5) 0;
+      padding: rem(5) rem(30) rem(5) rem(0);
       color: $color_1;
 
       @media (any-hover: hover) {
@@ -41,11 +41,12 @@
         }
       }
       &.secondLevel{
+
         &::before,
         &::after {
           content: "";
           position: absolute;
-          right: 10px;
+          right: 6px;
           top: 50%;
           background-color: $color_6;
           height: 2px;
