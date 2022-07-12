@@ -27,7 +27,7 @@
     &__link{
       transition: .5s;
       font-size: rem(18);
-      padding: rem(5) 0;
+      padding: rem(5) rem(30) rem(5) rem(0);
       color: $color_1;
 
       @media (any-hover: hover) {
@@ -41,7 +41,10 @@
         }
       }
       &.secondLevel{
+<<<<<<< HEAD
         padding-right: rem(30);
+=======
+>>>>>>> 33a5fad868427eaba6caa489e722fb8030960e04
 
         &::before,
         &::after {

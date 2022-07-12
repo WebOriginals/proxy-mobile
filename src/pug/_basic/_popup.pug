@@ -3,6 +3,8 @@
 .popup-link(data-popup="#entrance") войти
 .popup-link(data-popup="#registration") регистрация
 .popup-link(data-popup="#password-recovery") востановление
+.popup-link(data-popup="#refMany") вывод средств
+
 
 #popup.popup.partners(aria-hidden='true')
     .popup__wrapper
@@ -214,7 +216,6 @@
                             path(d='M10.7864 20.5182C10.7864 20.5182 10.618 20.5024 10.408 19.8378C10.1983 19.1734 9.13159 15.6762 9.13159 15.6762L17.6123 10.2906C17.6123 10.2906 18.102 9.99332 18.0845 10.2906C18.0845 10.2906 18.1719 10.3431 17.9095 10.5879C17.6473 10.8328 11.2475 16.5856 11.2475 16.5856', fill='#D2E5F1')
                             path(d='M13.4425 18.3865L11.1601 20.4674C11.1601 20.4674 10.9816 20.6028 10.7865 20.518L11.2236 16.6526', fill='#B5CFE4')
 
-
 #registration.popup.entrance(aria-hidden='true')
     .popup__wrapper
         .popup__content.entrance-content(style="background-image: url('./img/svg/fon.svg');")
@@ -339,4 +340,33 @@
 
 
 
+#refMany.popup.buyProxy.refMany(aria-hidden='true')
+    .popup__wrapper
+        .popup__content.buyProxy-content
+            button.popup__close(data-close, type='button')
+                svg(width='15', height='15', viewbox='0 0 15 15', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    g(opacity='0.5')
+                        path(d='M8.50698 7.50027L14.4284 1.57884C14.5454 1.4422 14.6066 1.26643 14.5996 1.08666C14.5927 0.906894 14.5182 0.736366 14.391 0.609156C14.2637 0.481945 14.0932 0.407422 13.9135 0.400478C13.7337 0.393534 13.5579 0.454682 13.4213 0.571701L7.49984 6.49313L1.57841 0.564558C1.44391 0.430055 1.26149 0.354492 1.07127 0.354492C0.881054 0.354492 0.69863 0.430055 0.564127 0.564558C0.429624 0.69906 0.354062 0.881485 0.354062 1.0717C0.354062 1.26192 0.429624 1.44434 0.564127 1.57884L6.4927 7.50027L0.564127 13.4217C0.489354 13.4857 0.428626 13.5645 0.385752 13.6531C0.342878 13.7418 0.318785 13.8383 0.314985 13.9367C0.311186 14.035 0.327761 14.1331 0.363672 14.2248C0.399582 14.3164 0.454052 14.3997 0.523663 14.4693C0.593273 14.5389 0.676521 14.5934 0.768182 14.6293C0.859843 14.6652 0.957937 14.6818 1.05631 14.678C1.15468 14.6742 1.2512 14.6501 1.33982 14.6072C1.42844 14.5643 1.50724 14.5036 1.57127 14.4288L7.49984 8.50741L13.4213 14.4288C13.5579 14.5459 13.7337 14.607 13.9135 14.6001C14.0932 14.5931 14.2637 14.5186 14.391 14.3914C14.5182 14.2642 14.5927 14.0936 14.5996 13.9139C14.6066 13.7341 14.5454 13.5583 14.4284 13.4217L8.50698 7.50027Z', fill='black')
+            .popup__body.buyProxy__body
+                .buyProxy__title Заявка на вывод
+                .buyProxy__text Выберите платежную систему куда необходимо вывести реферальные средства
+                .buyProxy__checckbox
+                    .form_radio
+                        input#radio-1(type='radio', name='radio', value='1', checked='')
+                        label(for='radio-1') Radio button 1
+                    .form_radio
+                        input#radio-2(type='radio', name='radio', value='2')
+                        label(for='radio-2') Radio button 2
+                    .form_radio
+                        input#radio-3(type='radio', name='radio', value='3')
+                        label(for='radio-3') Radio button 3
+
+                .paymentMethod-form__input
+                    label(for='pric') Укажите сумму пополнения
+                    input#pric(placeholder='500').paymentMethod-form__price
+                    span ₽ $ ₣ €
+
+                p *Позднее эти деньги нельзя будет вывести на другие платежные системы
+
+                button.button-o Подвердить
 

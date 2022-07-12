@@ -315,3 +315,52 @@ q{
   padding: em(11) em(50) em(11) em(20);
   border-radius: rem(5);
 }
+
+
+//radio
+
+.form_radio input[type=radio] {
+  display: none;
+}
+.form_radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.form_radio label:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 2px solid $color_7;
+  border-radius: 50%;
+}
+
+/* Checked */
+.form_radio input[type=radio]:checked + label:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $color_6;
+  top: 3px;
+  left: 4px;
+}
+
+/* Hover */
+.form_radio label:hover:before {
+  filter: brightness(120%);
+}
+
+/* Disabled */
+.form_radio input[type=radio]:disabled + label:before {
+  filter: grayscale(100%);
+}

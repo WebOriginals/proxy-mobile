@@ -643,3 +643,34 @@ body.popup-show::after {
   }
 
 }
+
+
+//#refMany
+.refMany{
+
+  .buyProxy-content{
+    max-width: rem(600);
+  }
+  .button-o{
+    width: 100%;
+    @include adaptiveValue(margin-top, 80,35);
+  }
+  .paymentMethod-form__input{
+    margin: 0;
+    grid-gap: rem(10);
+    @include adaptiveValue(margin-top, 50,35);
+    @include adaptiveValue(margin-bottom, 20,12);
+
+    label{
+      color: $color_7;
+    }
+  }
+}
+.buyProxy__checckbox{
+  margin-top: rem(28);
+  display: grid;
+  grid-gap: rem(12);
+}
+.buyProxy__text{
+  font-size: rem(16);
+}
