@@ -181,7 +181,7 @@ body {
 //споллеры
 @import "_ui/spoller";
 ///input
-//@import "_ui/input";
+@import "_ui/input";
 //табы
 @import "_ui/tabs";
 //описание товаров
@@ -227,3 +227,7 @@ body {
 
 //LK-statistics-api
 @import "pages/LK-statistics-api/tabl";
+
+
+//password recovery
+@import "pages/password_recovery/password_recovery";

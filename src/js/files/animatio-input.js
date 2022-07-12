@@ -119,17 +119,14 @@ const textOpenInputPass = () => {
         inputsBody.forEach( (inputBody) => {
             let input = inputBody.querySelector('.input__field');
             let btn = inputBody.querySelector('.eyes');
-
             btn.addEventListener('click', (event) => {
                 event.preventDefault();
-                console.log()
                 btn.classList.toggle('opp');
                 if(btn.classList.contains('opp')){
                     input.setAttribute("type", "text");
                 } else {
                     input.setAttribute("type", "password");
                 }
-
             })
         })
     }

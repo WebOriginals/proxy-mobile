@@ -15,6 +15,9 @@ body.popup-show::after {
   opacity: 1;
 }
 
+.popup__close{
+  outline: none;
+}
 .popup {
   position: fixed;
   top: 0;
@@ -533,7 +536,7 @@ body.popup-show::after {
 //entrance
 .entrance {
   &-content {
-    border-radius: 5px;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -543,6 +546,10 @@ body.popup-show::after {
     @include maq('tablet-wide') {
       padding: 40px 15px 60px;
     }
+  }
+  &__description{
+    text-align: center;
+    margin: rem(32) 0 rem(40);
   }
 
   .popup__close {
@@ -613,25 +620,26 @@ body.popup-show::after {
     margin: auto;
   }
 
-  .eyes{
-    position: absolute;
-    bottom: 15px;
-    right: 0;
-    z-index: 9;
 
-    & .close{
+
+}
+.eyes{
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  z-index: 9;
+
+  & .close{
+    display: none;
+  }
+  &.opp{
+
+    .open{
       display: none;
     }
-    &.opp{
-
-      .open{
-        display: none;
-      }
-      .close{
-        display: block;
-      }
+    .close{
+      display: block;
     }
-
   }
 
 }
