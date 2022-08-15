@@ -1,0 +1,15 @@
+.text-ref{
+  @include adaptiveValue(padding-top, 52, 30);
+  @include adaptiveValue(padding-bottom, 62, 35);
+
+  a{
+    text-decoration: underline;
+    color: $color_7;
+  }
+  h5{
+    margin-bottom: rem(16);
+  }
+  p{
+    line-height: 1.5;
+  }
+}

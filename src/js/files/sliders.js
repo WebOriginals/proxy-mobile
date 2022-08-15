@@ -96,7 +96,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 10,
+			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
 			breakpoints: {

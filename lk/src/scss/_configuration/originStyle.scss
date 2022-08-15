@@ -1,0 +1,366 @@
+//<Разметка текста>====================================================================================================
+.offer {
+  @include adaptiveValue(font-size,61, 49);
+  font-weight: 700;
+
+  @include maq('tablet') {
+    color: $color_1;
+  }
+}
+
+.title{
+
+}
+
+.h1,h1 {
+  @include adaptiveValue(font-size,36, 32);
+  font-weight: 700;
+}
+
+.h2,h2{
+  @include adaptiveValue(font-size,36, 32);
+  font-weight: 700;
+
+  span{
+    color: $color_7;
+  }
+
+}
+
+.h3,h3{
+  @include adaptiveValue(font-size,39, 39);
+  font-weight: 700;
+}
+
+.h4,h4{
+  @include adaptiveValue(font-size,24, 24);
+  font-weight: 700;
+}
+
+.h5,h5{
+  @include adaptiveValue(font-size,20, 20);
+  font-weight: 700;
+}
+
+.h6,h6{
+  @include adaptiveValue(font-size,16, 14);
+  font-weight: 700;
+}
+
+q{
+
+}
+.text-style{
+  h6{
+    margin-bottom: rem(30);
+    text-transform: uppercase;
+  }
+  span{
+    color: $color_6;
+  }
+  ul{
+    display: grid;
+    grid-gap: rem(20);
+    li{
+      position: relative;
+      padding-left: 30px;
+
+      &:before{
+        content: '●';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        color: $color_6;
+        font-size: 22px;
+        line-height: .3;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        box-shadow: 0px 0px 10px #EA5400;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+    }
+  }
+
+  blockquote{
+    border: 1px solid $color_6;
+    padding: 15px;
+  }
+}
+
+
+//Стилизация кнопок
+.button-o{
+  background: $color_6;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_6;
+
+
+  @media (any-hover: hover) {
+    &:hover {
+        box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+.button-r{
+  background: $color_7;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  cursor: pointer;
+  transition: .5s;
+  font-size:rem(18);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_7;
+  text-transform: uppercase;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow:0px 6px 10px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_7, 5);
+  }
+
+}
+
+.button-w{
+  background: transparent;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_6;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color_6;
+      color: $color_1;
+      box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+.button-w-w{
+  background: transparent;
+  color: $color_6;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_6;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color_6;
+      color: $color_1;
+      box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+.button-b{
+  background: transparent;
+  color: $color_7;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_7;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color_7;
+      color: $color_1;
+      box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_7, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+.button-b-b{
+  background: $color_7;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_7;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color_7;
+      color: $color_1;
+      box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_7, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+.button-g{
+  background: $color_1;
+  color: $color_8;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,14, 14);
+  font-weight: 700;
+  border-radius: 30px;
+  border: 1px solid $color_8;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_8, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+}
+
+
+//Стилизация input
+
+.input{
+  background: #FFFFFF;
+  border: 1px solid #414042;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: em(16) em(20);
+}
+.input2{
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  padding: em(11) em(50) em(11) em(20);
+  border-radius: rem(5);
+}
+
+
+//radio
+
+.form_radio input[type=radio] {
+  display: none;
+}
+.form_radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.form_radio label:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border: 2px solid $color_7;
+  border-radius: 50%;
+}
+
+/* Checked */
+.form_radio input[type=radio]:checked + label:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $color_6;
+  top: 3px;
+  left: 4px;
+}
+
+/* Hover */
+.form_radio label:hover:before {
+  filter: brightness(120%);
+}
+
+/* Disabled */
+.form_radio input[type=radio]:disabled + label:before {
+  filter: grayscale(100%);
+}

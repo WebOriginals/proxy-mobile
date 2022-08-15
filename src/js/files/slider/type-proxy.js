@@ -26,25 +26,25 @@ export function typeProxy() {
                     slidesPerView: 2,
                 },
 
-                800: {
-                    slidesPerView: 2.7,
-                },
-
-                900: {
-                    slidesPerView: 3,
-                },
-
-                1800: {
-                    slidesPerView: 4,
-                },
-
-                2200: {
-                    slidesPerView: 5,
-                },
-
-                2500: {
-                    slidesPerView: 6,
-                },
+                // 800: {
+                //     slidesPerView: 2.7,
+                // },
+                //
+                // 900: {
+                //     slidesPerView: 3,
+                // },
+                //
+                // 1800: {
+                //     slidesPerView: 3,
+                // },
+                //
+                // 2200: {
+                //     slidesPerView: 5,
+                // },
+                //
+                // 2500: {
+                //     slidesPerView: 5,
+                // },
 
             },
             pagination: {

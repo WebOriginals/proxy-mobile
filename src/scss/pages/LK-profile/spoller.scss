@@ -41,20 +41,20 @@
   border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 25%/50%;
   vertical-align: top;
-  background: #eee;
+  background: $color_7;
   transition: .2s;
 }
 .checkbox-ios .checkbox-ios-switch:before {
   content: '';
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 2px;
+  left: 2px;
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: white;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  //box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   transition: .15s;
 }
 .checkbox-ios input[type=checkbox] {

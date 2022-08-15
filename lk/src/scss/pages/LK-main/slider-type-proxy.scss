@@ -1,0 +1,80 @@
+.slider-type-proxy{
+  &__body{
+    @include adaptiveValue(margin-top, 16, 40);
+  }
+  &-pagination{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    bottom: 0;
+    margin-top: rem(20);
+
+
+    .swiper-pagination-bullet {
+      width: rem(8);
+      height: rem(8);
+      background-color: $color_3;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active{
+      background-color: $color_6;
+      width: rem(23);
+      height: rem(8);
+      border-radius: rem(5);
+    }
+  }
+  &-slide{
+    border: 1px solid $color_7;
+    padding: rem(20) rem(22);
+    border-radius: rem(5);
+    background-color: $color_1;
+
+    &.pro{
+      border: 1px solid $color_6;
+      .button-b{
+        color: $color_6;
+        border: 1px solid $color_6;
+        @media (any-hover: hover) {
+          &:hover {
+            background: $color_6;
+            color: $color_1;
+          }
+        }
+        &:focus{
+          background: darken($color_6, 5);
+          color: $color_1;
+          box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+        }
+      }
+    }
+
+    h4{
+      margin-bottom: rem(12);
+    }
+    ul{
+      margin-bottom: rem(48);
+      display: grid;
+      grid-gap: rem(8);
+
+      li{
+        padding-left: rem(15);
+        position: relative;
+
+        &:before{
+          content: '●';
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: $color_2;
+          font-size: 8px;
+        }
+      }
+    }
+    .button-b{
+      width: 100%;
+    }
+  }
+}

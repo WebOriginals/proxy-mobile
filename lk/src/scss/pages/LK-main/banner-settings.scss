@@ -1,0 +1,14 @@
+.banner-settings{
+  display: grid;
+  grid-gap: rem(32);
+  @include mq('tablet') {
+    grid-template-columns: 1.4fr 1fr;
+  }
+  @include mq('2K') {
+    grid-template-columns: 1.4fr 1fr 2fr;
+    max-width: 100%;
+  }
+  @include mq('2.5K') {
+    grid-template-columns: 1.4fr 1fr 3.3fr;
+  }
+}

@@ -1,0 +1,36 @@
+.footer{
+  padding: 25px 0;
+  background-color: $color_7;
+  color: $color_1;
+
+
+  &__container{
+    display: grid;
+    grid-gap: 30px;
+    @include mq('tablet-wide') {
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+
+      .full{
+        grid-column: span 6;
+        text-align: center;
+        border-top: 1px solid $color_1;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__link{
+    @include maq('tablet-wide') {
+     svg{
+       width: 100px !important;
+     }
+    }
+  }
+    a{
+      cursor: pointer;
+    &:hover{
+      color: $color_6;
+    }
+  }
+}
