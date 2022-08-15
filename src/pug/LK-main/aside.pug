@@ -26,14 +26,14 @@ aside.aside.menu__body
                 path(fill-rule='evenodd', clip-rule='evenodd', d='M149.633 21.1435C149.061 21.5378 149.049 21.6569 149.049 26.9854C149.049 30.239 149.154 32.6251 149.321 32.9248C149.579 33.3971 149.932 33.4248 155.775 33.4248H161.957L161.877 32.1928L161.797 30.9608L156.738 30.8899L151.677 30.8201V28.507H161.928V25.9177H151.679V23.3294H161.93V20.739H156.076C151.199 20.739 150.116 20.8078 149.633 21.1435Z', fill='white')
 
         .aside-scroll(data-simplebar)
-            nav.aside__menu.aside-menu
-                a(href="#").aside-menu__link.bold Главная
-                a(href="#").aside-menu__link.bold Мобильные прокси
-                a(href="#").aside-menu__link.bold Резедентские прокси
-                a(href="#").aside-menu__link.bold Серверные прокси
-
             ul.aside__menu.aside-menu(data-spollers data-one-spoller)
                 li
+                    a(href="#").aside-menu__link.bold Главная
+                li
+                    a(href="#").aside-menu__link.bold Мобильные прокси
+                li
+                    a(href="#").aside-menu__link.bold Резедентские прокси
+                li.spollers__title.aside-menu__link.bold.secondLevel(data-spoller) Реферальные отчисления
                      a(href="#").aside-menu__link.regular  История
                 li.spollers__title.aside-menu__link.regular.secondLevel(data-spoller) APIAPIAPIAP IAPIAPI APIAP IAPI
                 ul.list-secondLevel
@@ -41,6 +41,12 @@ aside.aside.menu__body
                         a(href="#").aside-menu__link.regular  По API
                     li
                         a(href="#").aside-menu__link.regular  По  ссылке
+
+            ul.aside__menu.aside-menu(data-spollers data-one-spoller)
+                li
+                     a(href="#").aside-menu__link.regular  История
+                li.spollers__title.aside-menu__link.regular.secondLevel(data-spoller) API
+
                 li
                     a(href="#").aside-menu__link.regular  Поддержка
                 li

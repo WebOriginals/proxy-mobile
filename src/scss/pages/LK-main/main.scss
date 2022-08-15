@@ -2,7 +2,7 @@
   display: grid;
 
   @include mq('desktop') {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 320px 1fr;
   }
   .__container-lk{
     padding: 0 rem(15);

@@ -41,6 +41,8 @@
         }
       }
       &.secondLevel{
+        padding-right: rem(30);
+
 
         &::before,
         &::after {
