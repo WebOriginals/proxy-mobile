@@ -1,0 +1,43 @@
+.notifications{
+  border: 1px solid $color_6;
+  padding: rem(16) rem(40);
+  border-radius: rem(5);
+  background-color: $color_1;
+  @include maq('2K') {
+    display: none;
+  }
+
+  &__title{
+    @include adaptiveValue(font-size, 24, 20);
+    font-weight: 700;
+    margin-bottom: rem(30);
+
+    .number{
+      display: inline-block;
+      background-color: $color_6;
+      padding:0 rem(5);
+      color: $color_1;
+      font-size: rem(14);
+      border-radius: rem(5);
+      margin-left: rem(5);
+    }
+
+  }
+  &__list{
+    display: grid;
+    grid-gap: rem(12);
+
+    li{
+      a{
+        display: flex;
+        align-items: center;
+        gap: rem(5);
+      }
+
+      span{
+        @include adaptiveValue(font-size, 18, 16);
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper.page-grid
+            include pug/LK-main/aside
+            main.page.lk-page
+                include pug/LK-main/header
+                .__container-lk
+                    +blueTitle("Блог")
+                    include pug/LK-blog/grid
+
+
+        include pug/_basic/_popup
+        include pug/_basic/_js

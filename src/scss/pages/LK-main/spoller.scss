@@ -43,6 +43,20 @@
       }
     }
   }
+
+  &__top-btn{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 23px;
+    align-items: center;
+  }
+
+  &__btn-loading{
+    margin-top: rem(20);
+    svg{
+      max-width: 100%;
+    }
+  }
   &-filter-btns{
     overflow-x: auto;
     max-width: 100%;

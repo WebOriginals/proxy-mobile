@@ -1,16 +1,12 @@
 .banner-settings{
   display: grid;
   grid-gap: rem(32);
+
   @include mq('tablet') {
     grid-template-columns: 1.4fr 1fr;
-    max-width: rem(1060);
   }
   @include mq('2K') {
-    grid-template-columns: 1.4fr 1fr 2fr;
+    grid-template-columns: 1.2fr 0.8fr 1.5fr;
     max-width: 100%;
   }
-  @include mq('2.5K') {
-    grid-template-columns: 1.4fr 1fr 3.3fr;
-  }
-
 }

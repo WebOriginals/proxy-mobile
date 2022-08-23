@@ -1,0 +1,42 @@
+.column{
+  padding: 25px 0;
+  @include mq('tablet') {
+    padding: 45px 0;
+  }
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: em(30);
+    @include adaptiveValue(margin-bottom, 70, 30);
+    @include mq('tablet') {
+      grid-column: span 3;
+    }
+  }
+  &__container{
+    display: grid;
+    grid-gap: em(15);
+    @include mq('tablet-990') {
+      grid-gap: em(35);
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-el{
+    padding: em(15);
+    position: relative;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    grid-gap: 0 20px;
+
+    &__title{
+      @include adaptiveValue(font-size, 18, 14);
+      font-weight: 700;
+    }
+    &__text{
+
+    }
+    &__img{
+      grid-row: span 2;
+    }
+  }
+}

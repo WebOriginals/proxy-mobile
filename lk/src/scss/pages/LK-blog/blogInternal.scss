@@ -1,0 +1,26 @@
+.blogInternal {
+
+  &__grid{
+    background-color: $color_1;
+    border-radius: 5px;
+    padding: 30px 20px;
+  }
+
+  &__title{
+    margin-bottom: 40px;
+  }
+
+  &__img-ibg {
+    min-height: 200px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__desctiption {
+    p {
+      @include adaptiveValue(font-size, 18, 16);
+      line-height: 1.5;
+    }
+  }
+}

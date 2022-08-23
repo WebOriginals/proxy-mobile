@@ -1,6 +1,6 @@
 //<Разметка текста>====================================================================================================
 .offer {
-  @include adaptiveValue(font-size,61, 49);
+  @include adaptiveValue(font-size,61, 35);
   font-weight: 700;
 
   @include maq('tablet') {
@@ -19,7 +19,7 @@
 
 .h2,h2{
   @include adaptiveValue(font-size,36, 32);
-  font-weight: 700;
+  font-weight: 900;
 
   span{
     color: $color_7;
@@ -100,6 +100,7 @@ q{
   background: $color_6;
   color: $color_1;
   padding: 0 25px;
+  min-width: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,6 +139,7 @@ q{
   border-radius: 30px;
   border: 1px solid $color_7;
   text-transform: uppercase;
+  min-width: 160px;
 
   @media (any-hover: hover) {
     &:hover {
@@ -160,6 +162,7 @@ q{
   height: 40px;
   cursor: pointer;
   transition: .5s;
+  min-width: 160px;
   @include adaptiveValue(font-size,18, 14);
   font-weight: 700;
   border-radius: 30px;
@@ -190,6 +193,7 @@ q{
   height: 40px;
   cursor: pointer;
   transition: .5s;
+  min-width: 160px;
   @include adaptiveValue(font-size,18, 14);
   font-weight: 700;
   border-radius: 30px;
@@ -220,6 +224,7 @@ q{
   height: 40px;
   cursor: pointer;
   transition: .5s;
+  min-width: 160px;
   @include adaptiveValue(font-size,18, 14);
   font-weight: 700;
   border-radius: 30px;
@@ -250,6 +255,7 @@ q{
   height: 40px;
   cursor: pointer;
   transition: .5s;
+  min-width: 160px;
   @include adaptiveValue(font-size,18, 14);
   font-weight: 700;
   border-radius: 30px;
@@ -273,6 +279,7 @@ q{
 .button-g{
   background: $color_1;
   color: $color_8;
+  min-width: 160px;
   padding: 0 25px;
   display: flex;
   justify-content: center;

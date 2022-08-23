@@ -1,0 +1,89 @@
+.aside{
+  background-color: $mainColor;
+  color: $color_1;
+  padding: rem(17) rem(28) rem(30);
+  border-top-right-radius: rem(5);
+  border-bottom-right-radius: rem(5);
+
+
+
+  &-scroll{
+    overflow-y: auto;
+    max-height:calc(100vh - 190px);
+  }
+  &__logo{
+    display: block;
+    @include adaptiveValue(margin-bottom, 75, 40);
+  }
+
+  &-menu{
+    display: grid;
+    grid-gap: rem(20);
+
+    &:last-child{
+      margin-top: rem(40);
+    }
+
+    &__link{
+      transition: .5s;
+      font-size: rem(18);
+      padding: rem(5) rem(30) rem(5) rem(0);
+      color: $color_1;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color_6;
+
+          .number {
+            transition: .5s;
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+      &.secondLevel{
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          right: 6px;
+          top: 50%;
+          background-color: $color_6;
+          height: 2px;
+          width: 10px;
+          transition: transform 0.5s ease 0s;
+        }
+      }
+
+
+      &._spoller-active  {
+       + .list-secondLevel{
+          display: grid;
+          grid-gap: rem(8);
+        }
+      }
+    }
+
+    .list-secondLevel{
+      padding-left: rem(10);
+      border-left: 1px solid $color_6;
+    }
+    .bold{
+      font-weight: 700;
+    }
+
+    .regular{
+      font-weight: 400;
+    }
+
+    .number{
+      display: inline-block;
+      background-color: $color_6;
+      padding:0 rem(5);
+      color: $color_1;
+      font-size: rem(14);
+      border-radius: rem(5);
+      margin-left: rem(5);
+    }
+  }
+}
