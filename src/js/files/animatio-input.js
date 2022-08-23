@@ -11,7 +11,7 @@
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
 
-( function( window ) {
+const inputAnimation = (window) => {
 
     'use strict';
 
@@ -23,7 +23,7 @@
 
 // classList support for class management
 // altho to be fair, the api sucks because it won't accept multiple classes at once
-    var hasClass, addClass, removeClass;
+    let hasClass, addClass, removeClass;
 
     if ( 'classList' in document.documentElement ) {
         hasClass = function( elem, c ) {
@@ -51,11 +51,11 @@
     }
 
     function toggleClass( elem, c ) {
-        var fn = hasClass( elem, c ) ? removeClass : addClass;
+        let fn = hasClass( elem, c ) ? removeClass : addClass;
         fn( elem, c );
     }
 
-    var classie = {
+    let classie = {
         // full names
         hasClass: hasClass,
         addClass: addClass,
@@ -77,9 +77,9 @@
         window.classie = classie;
     }
 
-})( window );
+};
 
-(function() {
+const monitorsTextInput = () => {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
     if (!String.prototype.trim) {
         (function() {
@@ -111,7 +111,7 @@
             classie.remove( ev.target.parentNode, 'input--filled' );
         }
     }
-})();
+};
 
 const textOpenInputPass = () => {
     if(document.querySelectorAll('.input-pass').length > 0){
@@ -130,5 +130,9 @@ const textOpenInputPass = () => {
             })
         })
     }
-}
+};
+
+
+inputAnimation( window );
+monitorsTextInput();
 textOpenInputPass();

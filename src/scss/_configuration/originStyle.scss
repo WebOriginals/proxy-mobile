@@ -299,6 +299,10 @@ q{
 }
 
 
+.btn-send-animation{
+
+}
+
 //Стилизация input
 
 .input{
@@ -363,4 +367,80 @@ q{
 /* Disabled */
 .form_radio input[type=radio]:disabled + label:before {
   filter: grayscale(100%);
+}
+
+
+.btn{
+  background: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 1em;
+
+  position: relative;
+  vertical-align: middle;
+  background: $color_6;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  //transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 700;
+}
+
+.btn-send-animation {
+  background-color: $color_1;
+  color: $color_6;
+  background-repeat: no-repeat;
+  background-image:   linear-gradient(to right, $color_6 100%, $color_6 100%),
+                      linear-gradient(to bottom,$color_6 100%, $color_6 100%),
+                      linear-gradient(to right, $color_6 100%, $color_6 100%),
+                      linear-gradient(to bottom, $color_6 100%, $color_6 100%);
+  background-size:    100% 3px,
+                      3px 100%,
+                      100% 3px,
+                      3px 100%;
+  background-position:    0 0,
+                          100% 0,
+                          100% 100%,
+                          0 100%;
+
+
+  animation: btnSend 2s linear 1;
+}
+
+@keyframes btnSend {
+  0% {
+    background-size:    0 3px,
+                        3px 0,
+                        0 3px,
+                        3px 0;
+  }
+  25% {
+    background-size:    100% 3px,
+                        3px 0,
+                        0 3px,
+                        3px 0;
+  }
+  50% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        0 3px,
+                        3px 0;
+  }
+  75% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 0;
+  }
+  100% {
+    background-size:    100% 3px,
+                        3px 100%,
+                        100% 3px,
+                        3px 100%;
+  }
 }

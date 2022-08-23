@@ -11,10 +11,10 @@
   }
 
   &__img-ibg {
-    min-height: 200px;
     margin-bottom: 30px;
     border-radius: 5px;
     overflow: hidden;
+    @include adaptiveValue(min-height,330, 200);
   }
 
   &__desctiption {

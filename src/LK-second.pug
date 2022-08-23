@@ -3,15 +3,7 @@ doctype html
 html(lang="ru")
     +head('Главная')
     body
-        .wrapper.page-grid
-            include pug/LK-main/aside
-            main.page.lk-page
-                include pug/LK-main/header
-                .__co
-                    include pug/LK-main/banner-blue-btn
-                    include pug/LK-main/text
-                    include pug/LK-main/banner-green
+        .wrapper
+            include pug/hints
 
-                    include pug/LK-main/proxy-column
-        include pug/_basic/_popup
         include pug/_basic/_js
